@@ -1,0 +1,20 @@
+import React from 'react'
+import './Investasi.css'
+
+const Investasi = () => {
+  return (
+     <div className="investasi-container">
+        <p>
+            Kami memastikan uang yang Anda Investasikan<br/>
+            sepenuhnya digunakan untuk <strong>perputaran bisnis</strong><br/>
+            dengan memegang data dari UMKM secara lengkap<br/>
+            disertai dengan dana yang tidak melebihi <strong>30% dari</strong><br/>
+            <strong>total valuasi bisnis.</strong> Keuntungan akan dibagikan<br/>
+            berupa <strong>persentase yang disepakati</strong> dari NET PROFIT.
+        </p>
+        <div className="image-placeholder"></div>
+    </div>
+  )
+}
+
+export default Investasi

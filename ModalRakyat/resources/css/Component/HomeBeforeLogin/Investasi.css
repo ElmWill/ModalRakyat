@@ -1,0 +1,14 @@
+.investasi-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    font-size: 28px;
+}
+
+.investasi-container .image-placeholder {
+    width: 560px;
+    height: 310px;
+    background-color: #d3d3d3;
+    border-radius: 20px;
+}
