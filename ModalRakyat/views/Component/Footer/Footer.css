@@ -1,0 +1,93 @@
+.footer {
+    width: 100%;
+    padding: 20px;
+    background: #d9d9d9;
+    margin-top: 30px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.brand-logo {
+    width: 120px;
+    cursor: pointer;
+}
+
+.brand-text {
+    font-size: 20px;
+    color: #333;
+    padding-left: 30px;
+}
+
+.brand-text p {
+    font-size: 16px;
+}
+.email, .phone {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 5px;
+}
+
+.contact img{
+    width: 27px;
+}
+
+.social-media-list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.social-media-list img {
+    width: 27px;
+}
+
+.footer-line {
+    padding: 0px 20px;
+}
+
+.horizontal-line {
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    margin: 20px 0;
+}
+
+.after-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.tnc {
+    font-size: 16px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.copyright {
+    font-size: 16px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.copyright img {
+    width: 20px;
+}

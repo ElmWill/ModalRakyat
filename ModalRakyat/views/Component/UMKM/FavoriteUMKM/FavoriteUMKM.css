@@ -1,0 +1,91 @@
+.favorite-umkm-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#favorite-umkm {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.favorite-umkm-header a{
+    color: #333;
+}
+
+.card-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px 0px;
+    border-radius: 20px;
+    scroll-behavior: smooth;
+}
+
+.card-link {
+    border: 1px solid #333;
+    overflow: hidden;
+}
+
+.card-link-item {
+    padding: 20px 10px;
+}
+
+.card-link-item h1 {
+    font-size: 36px;
+    padding-bottom: 10px;
+}
+
+.card-link-item h2 {
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.pendanaan {
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-list, .card-item, .card-link {
+    width: 520px;
+    display: block;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.card-list, .card-link, .card-image {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    border-color: #333;
+    color: #333;
+}
+
+.card-image {
+    width: 520px;
+    height: 300px;
+    border-radius: 20px 20px 0 0;
+}
+
+.progress-pendanaan {
+    padding-bottom: 10px;
+}
+
+.progress-pendanaan {
+    text-align: right;
+}
+
+.progress-bar {
+    border: 1px solid #333;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-bar-color {
+    height: 20px;
+    width: 70%; /* Ganti sesuai progress */
+    background-color: #5297FF;
+    line-height: 30px;
+    color: white;
+}
