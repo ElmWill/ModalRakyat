@@ -36,4 +36,9 @@ class Investor extends Model
     {
         return $this->belongsTo(User::class, 'userID', 'userID');
     }
+
+    public function investments()
+    {
+        return $this->hasMany(Investment::class, 'investorID', 'investorID');
+    }
 }
