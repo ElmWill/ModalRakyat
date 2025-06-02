@@ -50,4 +50,9 @@ class User extends Authenticatable
     {
         return $this->hasOne(Investor::class, 'userID', 'userID');
     }
+
+    public function umkmProfile()
+    {
+        return $this->hasOne(UMKM::class, 'userID', 'userID');
+    }
 }
