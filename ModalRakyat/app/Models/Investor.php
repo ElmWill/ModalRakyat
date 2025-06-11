@@ -12,6 +12,10 @@ class Investor extends Model
     protected $table = 'investors';
     protected $primaryKey = 'investorID';
     public $incrementing = true;
+
+    public function getRouteKeyName(){
+        return 'investorID';
+    }
     protected $fillable = [
         'userID',
         'bankAccountNumber',
@@ -40,5 +44,15 @@ class Investor extends Model
     public function investments()
     {
         return $this->hasMany(Investment::class, 'investorID', 'investorID');
+    }
+
+    public function watchlist()
+    {
+        return $this->belongsToMany(
+            UMKMProject::class,             
+            'investor_project_watchlist',    
+            'investorID', 
+            'projectID'
+        );
     }
 }

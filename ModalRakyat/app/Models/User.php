@@ -19,6 +19,10 @@ class User extends Authenticatable
      */
 
     protected $primaryKey = 'userID';
+
+    public function getRouteKeyName(){
+        return 'userID';
+    }
     
     protected $fillable = [
         'name',
