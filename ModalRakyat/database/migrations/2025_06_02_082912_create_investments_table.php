@@ -20,8 +20,8 @@ return new class extends Migration
             $table->decimal('expectedReturn', 15, 2);
             $table->decimal('actualReturnReceived', 15, 2)->nullable()->default(0);
 
-            $table->foreignId('projectID')->constrained('umkm_projects', 'projectID')->onDelete('cascade');
-            $table->foreignId('investorID')->constrained('investors', 'investorID')->onDelete('cascade');
+            $table->foreignId('projectID')->constrained('umkm_projects', 'projectID')->onDelete('restrict');
+            $table->foreignId('investorID')->constrained('investors', 'investorID')->onDelete('restrict');
             $table->timestamps();
         });
     }

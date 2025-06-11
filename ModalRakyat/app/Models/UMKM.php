@@ -9,7 +9,7 @@ class UMKM extends Model
 {
     use HasFactory;
 
-    protected $table = 'umkm';
+    protected $table = 'umkms';
 
     protected $primaryKey = 'umkmID';
 
@@ -50,11 +50,11 @@ class UMKM extends Model
 
     public function user()
     {
-        return $this->belongsTo(User::class, 'userID');
+        return $this->belongsTo(User::class, 'userID', 'userID');
     }
 
     public function projects()
     {
-        return $this->hasMany(UMKMProject::class, 'umkmID');
+        return $this->hasMany(UMKMProject::class, 'umkmID', 'umkmID');
     }
 }

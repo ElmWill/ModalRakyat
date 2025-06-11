@@ -18,13 +18,13 @@ return new class extends Migration
             $table->text('projectDescription')->nullable();
             $table->decimal('fundingTarget', 15, 2);
             $table->decimal('amountRaised', 15, 2)->default(0);
-            $table->integer('interestRate');
+            $table->decimal('interestRate', 5, 2);
             $table->date('campaignStartDate');
             $table->date('campaignEndDate');
             $table->string('projectStatus')->default('draft'); // draft, pending_approval, active_funding, funded, not_funded, completed
-            $table->string('proposalURL');
-            $table->string('financialProjectionURL');
-            $table->json('projectImageVideoURLs');
+            $table->string('proposalURL')->nullable();
+            $table->string('financialProjectionURL')->nullable();
+            $table->json('projectImageVideoURLs')->nullable();
 
             $table->timestamps();
         });

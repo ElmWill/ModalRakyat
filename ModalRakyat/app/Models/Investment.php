@@ -22,7 +22,6 @@ class Investment extends Model
         'investmentPercentage',
         'expectedReturn',
         'actualReturnReceived',
-        'investmentPercentage',
     ];
 
     protected $casts = [
