@@ -31,6 +31,10 @@ class Transaction extends Model
         return $this->belongsTo(User::class, 'userID', 'userID');
     }
 
+    public function getRouteKeyName(){
+        return 'transactionID';
+    }
+
     public function investment()
     {
         return $this->belongsTo(Investment::class, 'investmentID', 'investmentID');

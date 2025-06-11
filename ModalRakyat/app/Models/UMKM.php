@@ -53,6 +53,10 @@ class UMKM extends Model
         return $this->belongsTo(User::class, 'userID', 'userID');
     }
 
+    public function getRouteKeyName(){
+        return 'umkmID';
+    }
+
     public function projects()
     {
         return $this->hasMany(UMKMProject::class, 'umkmID', 'umkmID');

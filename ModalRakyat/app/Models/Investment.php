@@ -37,6 +37,10 @@ class Investment extends Model
         return $this->belongsTo(UMKMProject::class, 'projectID', 'projectID');
     }
 
+    public function getRouteKeyName(){
+        return 'investmentID';
+    }
+
     public function investor()
     {
         return $this->belongsTo(Investor::class, 'investorID', 'investorID');

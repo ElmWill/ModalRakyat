@@ -29,6 +29,10 @@ class UMKMProject extends Model
         'projectImageVideoURLs',
     ];
 
+    public function getRouteKeyName(){
+        return 'projectID';
+    }
+
     protected $casts = [
         'fundingTarget' => 'decimal:2',
         'amountRaised' => 'decimal:2',
@@ -46,5 +50,15 @@ class UMKMProject extends Model
     public function investments()
     {
         return $this->hasMany(Investment::class, 'projectID', 'projectID');
+    }
+
+    public function watchingInvestor()
+    {
+        return $this->belongsToMany(
+            Investor::class,                  
+            'investor_project_watchlist',  
+            'projectID',  
+            'investorID'  
+        );
     }
 }
