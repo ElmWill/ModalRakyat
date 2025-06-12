@@ -5,18 +5,21 @@ import profile_logo from '../../assets/Logo.jpg'
 
 const Navbar = () => {
   return (
-    <div className='navbar'>
-        <img src={modalrakyat_logo} alt="" className='logo'/>
-        <div className="nav-right">
-            <ul>
-                <li><a href="#">Home</a></li>    
-                <li><a href="#">UMKM</a></li>
-                <li><a href="#">Investment</a></li>
-            </ul>
-            <div id="profile">
-                <img src={profile_logo} alt="Logo Profile" />
-            </div>
-        </div>
+    <div className="nav">
+      <div className='navbar'>
+          <img src={modalrakyat_logo} alt="" className='logo'/>
+          <div className="nav-right">
+              <ul>
+                  <li><a href="#">Home</a></li>    
+                  <li><a href="#">UMKM</a></li>
+                  <li><a href="#">Investment</a></li>
+              </ul>
+              <div id="profile">
+                  <img src={profile_logo} alt="Logo Profile" />
+              </div>
+          </div>
+      </div>
+      <div className="nav-line"></div>
     </div>
   )
 }

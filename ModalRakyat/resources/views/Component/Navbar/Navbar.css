@@ -4,7 +4,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #d9d9d9;
+    background: #fff;
+}
+
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .logo{
@@ -16,7 +22,7 @@
 .nav-right {
     display: flex;
     align-items: center;
-    gap: 20px;
+    padding-right: 40px;
 }
 
 .nav-right ul {
@@ -40,4 +46,10 @@
 
 .nav-right ul li a:hover {
     color: #E52020;
+}
+
+.nav-line {
+  height: 2px;
+  background-color: #E52020;
+  width: 100%;
 }
