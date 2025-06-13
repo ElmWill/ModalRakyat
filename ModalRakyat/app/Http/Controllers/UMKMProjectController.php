@@ -23,6 +23,12 @@ class UMKMProjectController extends Controller
             });
         }
 
+        if ($request->has('status') && !empty($request->input('status'))) {
+            $statusInput = $request->input('status');
+            $statuses = explode(',', $statusInput);
+            $query->whereIn('projectStatus', $statuses);
+        }
+
         $investor = Auth::user()?->investorProfile;
         
         $watchlistProjectIds = [];
