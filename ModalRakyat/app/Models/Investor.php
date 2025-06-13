@@ -55,4 +55,14 @@ class Investor extends Model
             'projectID'
         );
     }
+
+    public function favorites()
+    {
+        return $this->belongsToMany(
+        UMKMProject::class,
+        'investor_project_favorites',
+        'investorID',
+        'projectID'
+        );
+    }
 }

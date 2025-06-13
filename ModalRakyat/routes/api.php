@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FavoriteController;
 use App\Http\Controllers\WatchlistController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -11,6 +12,12 @@ Route::prefix('investor')->name('investor.')->group(function () {
 
 Route::prefix('watchlist')->name('watchlist.')->group(function () {
     Route::get('/', [WatchlistController::class, 'index'])->name('index');
-    Route::post('/{project:projectID}', [WatchlistController::class, 'store'])->name('watchlist.add');
-    Route::delete('/{project:projectID}', [WatchlistController::class, 'destroy'])->name('watchlist.remove');
+    Route::post('/{project:projectID}', [WatchlistController::class, 'store'])->name('add');
+    Route::delete('/{project:projectID}', [WatchlistController::class, 'destroy'])->name('remove');
+});
+
+Route::prefix('favorites')->name('favorites.')->group(function () {
+    Route::get('/', [FavoriteController::class, 'index'])->name('index');
+    Route::post('/{project:projectID}', [FavoriteController::class, 'store'])->name('add');
+    Route::delete('/{project:projectID}', [FavoriteController::class, 'destroy'])->name('remove');
 });
