@@ -1,15 +1,5 @@
-.watchlist-umkm-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 #watchlist-umkm {
     padding: 10px 40px;
-}
-
-.watchlist-umkm-header a{
-    color: #333;
 }
 
 .card-wrapper {

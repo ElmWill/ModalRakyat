@@ -55,7 +55,6 @@ const FavoriteUMKM = () => {
     <div id="favorite-umkm">
       <div className="favorite-umkm-header">
         <h1>Favorite UMKM</h1>
-        <a href="#"><u>Lihat Semua</u></a>
       </div>
       <div className="card-wrapper">
         <ul className="card-list">

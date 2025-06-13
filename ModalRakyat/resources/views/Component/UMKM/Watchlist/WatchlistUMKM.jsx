@@ -54,7 +54,6 @@ const WatchlistUMKM = () => {
     <div id="watchlist-umkm">
         <div className="watchlist-umkm-header">
             <h1>Watch List</h1>
-            <a href="#"><u>Lihat Semua</u></a>
         </div>
         <div className="card-wrapper">
             <ul className="card-list">
