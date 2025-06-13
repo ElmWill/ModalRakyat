@@ -1,7 +1,6 @@
 import React from 'react'
 import './Heading.css'
 import { Carousel } from 'react-bootstrap'
-import umkm1 from '../../assets/UMKM-Heading.jpg'
 
 const Heading = () => {
   return (
