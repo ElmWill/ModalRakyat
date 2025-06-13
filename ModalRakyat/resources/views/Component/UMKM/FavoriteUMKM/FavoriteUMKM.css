@@ -33,18 +33,21 @@
 
 .card-link-item h1 {
     font-size: 36px;
-    padding-bottom: 10px;
 }
 
 .card-link-item h2 {
     font-size: 20px;
     font-weight: lighter;
+    margin: 0px;
 }
 
 .pendanaan {
-    font-size: 14px;
     display: flex;
     justify-content: space-between;
+}
+
+.pendanaan h3 {
+    font-size: 14px;
 }
 
 .card-list, .card-item, .card-link {
@@ -62,18 +65,30 @@
     color: #333;
 }
 
+.card-list {
+  display: flex;
+  gap: 10px;
+  padding: 0;
+  list-style: none;
+}
+
 .card-image {
     width: 520px;
     height: 300px;
     border-radius: 20px 20px 0 0;
 }
 
-.progress-pendanaan {
-    padding-bottom: 10px;
+.card-item {
+    position: relative;
 }
 
 .progress-pendanaan {
+    padding-bottom: 10px;
     text-align: right;
+}
+
+.progress-pendanaan p {
+    margin: 0;
 }
 
 .progress-bar {
@@ -84,8 +99,33 @@
 
 .progress-bar-color {
     height: 20px;
-    width: 70%; /* Ganti sesuai progress */
     background-color: #5297FF;
     line-height: 30px;
     color: white;
+}
+
+.status-badge-umkm {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 24px;
+    color: #fff;
+    z-index: 1;
+    width: 180px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-color: #333;
+    border-style: solid;
+}
+
+.status-badge-umkm.on-progress {
+    background-color: orange;
+}
+
+.status-badge-umkm.done {
+    background-color: green;
 }
