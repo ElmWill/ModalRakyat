@@ -1,14 +1,14 @@
-.favorite-umkm-header {
+.watchlist-umkm-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#favorite-umkm {
+#watchlist-umkm {
     padding: 10px 40px;
 }
 
-.favorite-umkm-header a{
+.watchlist-umkm-header a{
     color: #333;
 }
 

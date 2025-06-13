@@ -1,14 +1,14 @@
-.favorite-umkm-header {
+.recommended-umkm-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#favorite-umkm {
+#recommended-umkm {
     padding: 10px 40px;
 }
 
-.favorite-umkm-header a{
+.recommended-umkm-header a{
     color: #333;
 }
 
