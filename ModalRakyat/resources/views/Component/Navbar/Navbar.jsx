@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './Navbar.css'
 import modalrakyat_logo from '../../assets/modal rakyat_warna2.png'
-import profile_logo from '../../assets/Logo.jpg'
+import profile from '../../assets/profile-image.png'
 
 const Navbar = () => {
   return (
@@ -17,7 +17,9 @@ const Navbar = () => {
                 <li><Link to="/">Trade</Link></li>
               </ul>
               <div id="profile">
-                  <img src={profile_logo} alt="Logo Profile" />
+                  <Link to="/manage-profile">
+                    <img src={profile} alt="Logo Profile" />
+                  </Link>
               </div>
           </div>
       </div>

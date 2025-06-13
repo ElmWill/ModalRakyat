@@ -24,7 +24,7 @@
 }
 
 .login-link a {
-    color: #2e7d67;
+    color: #E52020;
     font-weight: bold;
 }
 
@@ -72,7 +72,7 @@ input[type="text"] {
 }
 
 .checkbox-container a {
-    color: #2e7d67;
+    color: #E52020;
     text-decoration: none;
     font-weight: bold;
 }
@@ -80,7 +80,7 @@ input[type="text"] {
 .register-button {
     margin-top: 1.5rem;
     padding: 0.8rem;
-    background-color: #2e7d67;
+    background-color: #FBA518;
     color: white;
     font-size: 1rem;
     border: none;
