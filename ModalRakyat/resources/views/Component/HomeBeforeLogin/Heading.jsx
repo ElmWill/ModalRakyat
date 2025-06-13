@@ -1,9 +1,10 @@
 import React from 'react'
 import './Heading.css'
+import { Carousel } from 'react-bootstrap'
 
 const Heading = () => {
   return (
-    <div>
+    <div id='heading'>
       <div class="heading-container">
         <div class="text-section">
             <h1>MODAL RAKYAT</h1>
@@ -12,8 +13,7 @@ const Heading = () => {
                 <button id="explore-button">Explore</button>
             </a>
         </div>
-        <div class="image-placeholder"></div>
-    </div>
+      </div>
 
     <div class="benefit-container">
         <h2>No Fee For Investors</h2>

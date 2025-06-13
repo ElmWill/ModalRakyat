@@ -1,6 +1,6 @@
 import React from 'react'
-import './FavoriteUMKM.css'
 import wartegKemuning from '../../../assets/Warteg Kemuning.png'
+import './RecommendedUMKM.css'
 
 const createUMKM = (name, category, progress, totalPendanaan, image) => ({
   name,
@@ -49,23 +49,21 @@ const UMKMCard = ({ name, category, progress, totalPendanaan, image, status }) =
   </li>
 )
 
-// Komponen utama
-const FavoriteUMKM = () => {
+const RecommendedUMKM = () => {
   return (
-    <div id="favorite-umkm">
-      <div className="favorite-umkm-header">
-        <h1>Favorite UMKM</h1>
-      </div>
-      <div className="card-wrapper">
-        <ul className="card-list">
-            {umkmList.map((umkm, index) => (
-            <UMKMCard key={index} {...umkm} />
-            ))}
-        </ul>
+    <div id="recommended-umkm">
+        <div className="recommended-umkm-header">
+            <h1>Recommend</h1>
         </div>
-
+        <div className="card-wrapper">
+            <ul className="card-list">
+                {umkmList.map((umkm, index) => (
+                <UMKMCard key={index} {...umkm} />
+                ))}
+            </ul>
+        </div>
     </div>
   )
 }
 
-export default FavoriteUMKM
+export default RecommendedUMKM
