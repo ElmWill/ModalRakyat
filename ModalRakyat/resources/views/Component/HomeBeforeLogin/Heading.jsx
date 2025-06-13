@@ -1,9 +1,7 @@
 import React from 'react'
 import './Heading.css'
 import { Carousel } from 'react-bootstrap'
-import umkm1 from '../../assets/UMKM-1.jpg'
-import umkm2 from '../../assets/UMKM-2.png'
-import umkm3 from '../../assets/UMKM-3.jpg'
+import umkm1 from '../../assets/UMKM-Heading.jpg'
 
 const Heading = () => {
   return (
@@ -16,19 +14,6 @@ const Heading = () => {
                 <button id="explore-button">Explore</button>
             </a>
         </div>
-        {/* <div className="heading-image">
-          <Carousel fade interval={3000} controls={false} indicators={false}>
-            <Carousel.Item>
-              <img src={umkm1} className="carousel-image" alt="Gambar 1" />
-            </Carousel.Item>
-            <Carousel.Item>
-              <img src={umkm2} className="carousel-image" alt="Gambar 2" />
-            </Carousel.Item>
-            <Carousel.Item>
-              <img src={umkm3} className="carousel-image" alt="Gambar 3" />
-            </Carousel.Item>
-          </Carousel>
-        </div> */}
       </div>
 
     <div class="benefit-container">

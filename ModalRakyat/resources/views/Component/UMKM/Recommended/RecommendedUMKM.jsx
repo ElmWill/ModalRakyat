@@ -54,7 +54,6 @@ const RecommendedUMKM = () => {
     <div id="recommended-umkm">
         <div className="recommended-umkm-header">
             <h1>Recommend</h1>
-            <a href="#"><u>Lihat Semua</u></a>
         </div>
         <div className="card-wrapper">
             <ul className="card-list">

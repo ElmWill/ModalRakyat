@@ -1,15 +1,5 @@
-.favorite-umkm-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 #favorite-umkm {
     padding: 10px 40px;
-}
-
-.favorite-umkm-header a{
-    color: #333;
 }
 
 .card-wrapper {
