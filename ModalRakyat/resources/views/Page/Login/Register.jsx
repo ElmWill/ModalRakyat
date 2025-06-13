@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import './Register.css'
 import modalrakyat_logo from '../../assets/modal rakyat_warna2.png'
 
@@ -10,6 +11,7 @@ const Register = () => {
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
     const [agree, setAgree] = useState(false);
     const [error, setError] = useState('');
+    const navigate = useNavigate();
 
     const validatePassword = (pw) => {
         const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).{8,}$/;
@@ -17,15 +19,22 @@ const Register = () => {
     }
 
     const handleRegister = () => {
-        if (!validatePassword(password)) {
-        setError('Password harus minimal 8 karakter, mengandung huruf kapital, huruf kecil, dan karakter spesial.');
-        } else if (password !== confirmPassword) {
-        setError('Konfirmasi password tidak cocok.');
-        } else if (!agree) {
-        setError('Anda harus menyetujui syarat dan ketentuan.');
-        } else {
-        setError('');
-        alert('Akun berhasil dibuat!');
+        if (!email.includes('@')) {
+            setError('Alamat email tidak valid. Harus mengandung "@"');
+        }
+        else if (!validatePassword(password)) {
+            setError('Password harus minimal 8 karakter, mengandung huruf kapital, huruf kecil, dan karakter spesial.');
+        } 
+        else if (password !== confirmPassword) {
+            setError('Konfirmasi password tidak cocok.');
+        } 
+        else if (!agree) {
+            setError('Anda harus menyetujui syarat dan ketentuan.');
+        } 
+        else {
+            setError('');
+            alert('Akun berhasil dibuat!');
+            navigate('/home');
         }
     }
 
@@ -49,10 +58,11 @@ const Register = () => {
                         type={showPassword ? 'text' : 'password'}
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
-                        placeholder="Password"
+                        placeholder={showPassword ? 'Password' : '**************'}
                     />
                     <span onClick={() => setShowPassword(!showPassword)} className="toggle-password">
                         {showPassword ? '🙈' : '👁️'}
+                        
                     </span>
                 </div>
 
@@ -62,7 +72,7 @@ const Register = () => {
                         type={showConfirmPassword ? 'text' : 'password'}
                         value={confirmPassword}
                         onChange={(e) => setConfirmPassword(e.target.value)}
-                        placeholder="Konfirmasi Password"
+                        placeholder={showConfirmPassword ? 'Konfirmasi Password' : '**************'}
                     />
                     <span onClick={() => setShowConfirmPassword(!showConfirmPassword)} className="toggle-password">
                         {showConfirmPassword ? '🙈' : '👁️'}
