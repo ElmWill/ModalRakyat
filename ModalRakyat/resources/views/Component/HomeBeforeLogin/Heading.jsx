@@ -1,6 +1,5 @@
 import React from 'react'
 import './Heading.css'
-import { Carousel } from 'react-bootstrap'
 
 const Heading = () => {
   return (
