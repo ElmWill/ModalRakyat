@@ -5,6 +5,7 @@
     align-items: center;
     justify-content: space-between;
     background: #fff;
+    font-family: 'Urbanist', sans-serif;
 }
 
 .nav {
@@ -42,6 +43,7 @@
 
 .nav-right ul li {
     margin: 0 10px;
+    font-family: 'Urbanist', sans-serif;
 }
 
 .nav-right ul li a {
@@ -50,6 +52,7 @@
     font-size: 16px;
     padding: 5px 10px;
     transition: color 0.3s ease;
+    font-family: 'Urbanist', sans-serif;
 }
 
 .nav-right ul li a:hover {
