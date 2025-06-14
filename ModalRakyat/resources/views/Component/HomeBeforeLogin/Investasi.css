@@ -6,6 +6,18 @@
     font-size: 28px;
 }
 
+#investasi {
+    text-decoration: none;
+}
+
+#investasi h1 {
+    margin-bottom: 16px;
+}
+
+#investasi p, #investasi strong{
+    font-family: 'Urbanist', sans-serif;
+}
+
 .investasi-container .image-placeholder {
     width: 560px;
     height: 310px;
