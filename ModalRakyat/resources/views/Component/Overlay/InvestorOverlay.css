@@ -1,0 +1,47 @@
+.profile-overlay-backdrop {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.profile-overlay {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.profile-overlay ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.profile-overlay li {
+    margin: 8px 0;
+}
+
+.profile-overlay button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#overlay-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    text-align: left;
+}
+
+#overlay-content img {
+    width: 20px;
+    margin-right: 10px;
+}
