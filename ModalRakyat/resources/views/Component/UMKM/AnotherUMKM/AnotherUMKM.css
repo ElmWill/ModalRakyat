@@ -1,0 +1,170 @@
+#another-umkm {
+    padding: 10px 40px;
+}
+
+#another-umkm-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 30px;
+}
+
+.pagination-button,
+.pagination-page {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 8px 12px;
+    background-color: white;
+    cursor: pointer;
+    min-width: 40px;
+    height: 40px;
+    font-weight: normal;
+}
+
+.pagination-page.active {
+    font-weight: bold;
+    border-color: #E52020;
+}
+
+.pagination-button:disabled,
+.pagination-page:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+#cards-container {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 20px 0px;
+    text-decoration: none;
+}
+
+#cards-container img {
+    width: 520px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 20px 20px;
+    overflow: hidden;
+}
+
+#card-info {
+    list-style: none;
+    overflow-wrap: break-word;
+    max-width: 60%;
+}
+#description {
+    text-align: justify;
+    font-family: 'Urbanist', sans-serif;
+}
+
+#card-link {
+    text-decoration: none;
+    color: #000000;
+}
+
+#category {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0px;
+    align-items: center;
+}
+
+#category h2 {
+    font-size: 28px;
+    font-weight: 350;
+    font-family: 'Urbanist', sans-serif;
+}
+
+#category p {
+    font-size: 16px;
+    font-weight: lighter;
+    color: #808284;
+    text-align: center;
+    margin: 0;
+}
+
+#cards-container p {
+    margin-bottom: 10px;
+}
+
+#category p {
+    font-size: 16px;
+    font-weight: lighter;
+    color: #808284;
+    text-align: center;
+    margin: 0;
+}
+
+#progress-bar {
+    border: 1px solid #333;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+#progress-bar-color {
+    height: 20px;
+    background-color: #5297FF;
+    line-height: 30px;
+    color: white;
+}
+
+#pendanaan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#pendanaan h3 {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+#investor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#investor h3 {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+#urbanist {
+    font-family: 'Urbanist', sans-serif;
+}
+
+#invest-button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#invest-button button {
+    width: 140px;
+    height: 40px;
+    padding: 0.5rem 1rem;
+    background-color: #FBA518;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#line {
+    height: 2px;
+    background-color: #E52020;
+    margin: 20px 0;
+}
