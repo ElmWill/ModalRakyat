@@ -1,0 +1,66 @@
+#history-container {
+    align-self: flex-start;
+    width: 100%;
+    padding: 40px;
+}
+
+#success, #fail{
+    padding: 10px 0px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#success img, #fail img {
+    width: 44px;
+}
+
+#success h2, #fail h2 {
+    font-size: 28px;
+    font-family: 'Urbanist', 'sans-family';
+}
+
+#history-label {
+    margin-left: 5vh;
+    text-align: left;
+}
+
+#right-side {
+    left: 60vh;
+    position: absolute;
+    display: flex;
+    align-items: center;
+}
+
+#success #line-vertical {
+    width: 2px;
+    height: 30px;
+    background: #70AF59;
+    margin-left: 16px;
+    flex-shrink: 0;
+}
+
+#date {
+    margin: 5vh;
+    color: #9C9C9C;
+    font-weight: 400px;
+}
+
+#amount {
+    text-align: right;
+    margin-left: auto;
+}
+
+#history-line {
+    height: 1px;
+    background-color: #E52020;
+    margin: 5px 0;
+}
+
+#fail #line-vertical {
+    width: 2px;
+    height: 30px;
+    background: #EF5E5E;
+    margin-left: 16px;
+    flex-shrink: 0;
+}
