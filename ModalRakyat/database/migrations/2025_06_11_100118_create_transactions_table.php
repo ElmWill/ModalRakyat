@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('transactions', function (Blueprint $table) {
             $table->id('transactionID');
             $table->foreignId('userID')->constrained('users', 'userID');
-            $table->foreignId('investmentID')->constrained('investments', 'investmentID')->nullable();
+            $table->foreignId('investmentID')->constrained('investments', 'investmentID')->nullable()->onDelete('set null');
             $table->string('type');  // Tipe transaksi: deposit, withdrawal, investment_payment, return_payout, fee, etc.
             $table->decimal('amount', 18, 2);
             $table->string('status')->default('pending'); // Status: pending, success, failed, cancelled
