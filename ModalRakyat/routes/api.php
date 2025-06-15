@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\FavoriteController;
 use App\Http\Controllers\UMKMProjectController;
+use App\Http\Controllers\WalletController;
 use App\Http\Controllers\WatchlistController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -24,3 +25,9 @@ Route::prefix('favorites')->name('favorites.')->group(function () {
 });
 
 Route::get('/projects', [UMKMProjectController::class, 'index'])->name('projects.index');
+
+Route::prefix('wallet')->name('wallet.')->group(function () {
+    Route::post('/deposit', [WalletController::class, 'prepareDeposit'])->name('deposit.prepare');
+    Route::post('/deposit/{transaction:transactionID}/confirm', [WalletController::class, 'confirmDeposit'])->name('deposit.confirm');
+    Route::post('/withdrawal', [WalletController::class, 'requestWithdrawal'])->name('withdrawal.request');
+});
