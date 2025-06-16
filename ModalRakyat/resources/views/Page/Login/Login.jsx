@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom';
 import './Login.css'
 import modalrakyat_logo from '../../assets/modal rakyat_warna2.png'
 
@@ -71,7 +71,7 @@ const Login = () => {
             </button>
 
             <p className="signup-link">
-            Belum punya akun? <a href="/register">Buat akun</a>
+                Belum punya akun? <Link to="/register">Buat akun</Link>
             </p>
 
             <div className="alt-buttons">

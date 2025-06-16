@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom';
 import './Register.css'
 import modalrakyat_logo from '../../assets/modal rakyat_warna2.png'
 
@@ -46,7 +46,7 @@ const Register = () => {
 
             <div className="form-container">
                 <p className="login-link">
-                Sudah punya akun? <a href="/login">Masuk</a>
+                    Sudah punya akun? <Link to="/login">Masuk</Link>
                 </p>
                 
                 <label>Alamat Email <span className="required">*</span></label>
