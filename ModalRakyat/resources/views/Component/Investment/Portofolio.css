@@ -1,0 +1,48 @@
+#porto-container{
+    padding: 10px 40px;
+}
+
+#porto-items{
+    border: 1px solid #E52020;
+    border-radius: 10px; 
+    margin: 20px 0px;
+}
+
+#porto-umkm-name {
+    padding: 20px 10px 5px;
+}
+
+#porto-umkm-detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px 20px;
+}
+
+.porto-value {
+    font-weight: lighter;
+}
+
+#porto-umkm-detail button {
+    width: 168px;
+    height: 55px;
+    border-radius: 10px;
+    box-shadow: none;
+    color: #fff;
+    font-weight: 500;
+}
+
+#download-report-button button {
+    border-color: #70AF59;
+    background-color: #70AF59;
+}
+
+#sell-ownership-button button {
+    border-color: #EF5E5E;
+    background-color: #EF5E5E;
+}
+
+#see-porto-detail-button button {
+    border-color: #FBA518;
+    background-color: #FBA518;
+}

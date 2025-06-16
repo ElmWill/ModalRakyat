@@ -23,7 +23,7 @@ const Navbar = () => {
               <ul>
                 <li><Link to="/home">Home</Link></li>    
                 <li><Link to="/umkm">UMKM</Link></li>
-                <li><Link to="/">Investment</Link></li>
+                <li><Link to="/investment">Investment</Link></li>
                 <li><Link to="/">Trade</Link></li>
               </ul>
               <div id="profile" onClick={toggleOverlay}>
