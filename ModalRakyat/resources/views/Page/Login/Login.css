@@ -96,7 +96,7 @@ input[type="text"] {
     justify-content: center;
     border: 1px solid #ccc;
     background-color: white;
-    font-size: 0.8rem;
+    font-size: 12px;
     gap: 0.5rem;
     cursor: pointer;
     border-radius: 4px;
