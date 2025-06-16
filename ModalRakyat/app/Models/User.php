@@ -6,11 +6,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
-    use HasFactory, Notifiable;
+    use HasApiTokens, HasFactory, Notifiable;
 
     /**
      * The attributes that are mass assignable.
@@ -20,16 +21,31 @@ class User extends Authenticatable
 
     protected $primaryKey = 'userID';
 
+    public function roles()
+    {
+        return $this->belongsToMany(Role::class);
+    }
+
+    public function activeRole()
+    {
+        return $this->belongsTo(Role::class, 'active_role');
+    }
+
     public function getRouteKeyName(){
         return 'userID';
     }
-    
+
+    public function hasRole($roleName)
+    {
+        return $this->roles()->where('name', $roleName)->exists();
+    }
+        
     protected $fillable = [
         'name',
         'email',
         'password',
     ];
-
+    
     /**
      * The attributes that should be hidden for serialization.
      *
