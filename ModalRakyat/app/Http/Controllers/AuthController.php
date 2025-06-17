@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 use App\Models\Role; 
 
 class AuthController extends Controller
@@ -13,6 +14,8 @@ class AuthController extends Controller
     // Register
     public function register(Request $request)
     {
+        Log::info('Register Request', $request->all());
+
         $request->validate([
             'name' => 'required|string',
             'email' => 'required|email|unique:users',
@@ -21,6 +24,9 @@ class AuthController extends Controller
 
         $investorRole = Role::where('name', 'investor')->first();
         
+        if (!$investorRole) {
+            return response()->json(['error' => 'Role investor not found'], 500);
+        }
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
