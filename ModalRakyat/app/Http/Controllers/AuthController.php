@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 use App\Models\Role; 
 
 class AuthController extends Controller
@@ -13,6 +14,8 @@ class AuthController extends Controller
     // Register
     public function register(Request $request)
     {
+        Log::info('Register Request', $request->all());
+
         $request->validate([
             'name' => 'required|string',
             'email' => 'required|email|unique:users',
@@ -25,6 +28,9 @@ class AuthController extends Controller
             return response()->json(['message' => 'Role investor not found. Please seed roles table.'], 500);
         }
         
+        if (!$investorRole) {
+            return response()->json(['error' => 'Role investor not found'], 500);
+        }
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
@@ -43,7 +49,7 @@ class AuthController extends Controller
         ], 201);
 
     }
-        // Login
+    // Login
     public function login(Request $request)
     {
         $request->validate([
@@ -117,6 +123,15 @@ class AuthController extends Controller
         return response()->json([
             'message' => 'Profile updated successfully',
             'user' => $user
+        ]);
+    }
+
+    public function logout(Request $request)
+    {
+        $request->user()->currentAccessToken()->delete();
+
+        return response()->json([
+            'message' => 'Successfully logged out'
         ]);
     }
 

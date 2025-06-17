@@ -7,7 +7,9 @@ import Balance from '../../Component/Balance/Balance'
 import History from '../../Component/MyWallet/History'
 
 const MyWalletUMKM = () => {
+    // Nanti data dari database
     const [balance, setBalance] = useState(20000000) // saldo awal Rp.20.000.000
+    const [invest] = useState(200000000) // Saldo diinvestasikan Rp.200.000.000
     // const [historyData, setHistoryData] = useState([]) // riwayat transaksi
     const [historyData, setHistoryData] = useState([ // data dummy
     { type: 'DEPOSIT', status: 'SUCCESSED', amount: 150000 },
@@ -31,7 +33,9 @@ const MyWalletUMKM = () => {
                 setHistoryData={setHistoryData} 
                 />
             </div>
-            <Balance balance={balance} />
+            <Balance 
+            balance={balance}
+            invest={invest} />
             <History historyData={historyData} />
         </div>
     )

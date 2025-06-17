@@ -1,0 +1,48 @@
+#search-overlay {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    z-index: 999;
+    overflow-y: auto;
+    padding: 20px 40px;
+}
+
+#search-close-button {
+    background: none;
+    border: none;
+    font-size: 28px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+
+#search-overlay-content {
+    margin-top: 50px;
+}
+
+#search-not-found {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 50px;
+    color: gray;
+}
+
+#search-cards-container {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 0;
+    text-decoration: none;
+}
+
+#search-cards-container img {
+    width: 520px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 20px 20px;
+    overflow: hidden;
+}

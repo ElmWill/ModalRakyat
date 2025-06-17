@@ -27,7 +27,7 @@ class FavoriteController extends Controller
         }
         
         Auth::user()->investorProfile->favorites()->syncWithoutDetaching([$project->projectID]);
-        return response()->json(['message' => 'Proyek ditambahkan ke watchlist.'], 201);
+        return response()->json(['message' => 'Proyek ditambahkan ke favorites.'], 201);
     }
 
     public function destroy(UMKMProject $project)
@@ -38,6 +38,6 @@ class FavoriteController extends Controller
         }
 
         Auth::user()->investorProfile->favorites()->detach($project->projectID);
-        return response()->json(['message' => 'Proyek dihapus dari watchlist.'], 200);
+        return response()->json(['message' => 'Proyek dihapus dari favorites.'], 200);
     }
 }
