@@ -6,6 +6,11 @@ use App\Http\Controllers\SearchController;
 use App\Http\Controllers\UMKMProjectController;
 use App\Http\Controllers\WalletController;
 use App\Http\Controllers\WatchlistController;
+use App\Http\Controllers\WalletUMKMController;
+use App\Http\Controllers\InvestmentController;
+use App\Http\Controllers\DividendController;
+use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\StoryController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InvestorController;
@@ -46,3 +51,12 @@ Route::middleware('auth:sanctum')->group(function () {
 });
 
 Route::middleware('auth:sanctum')->put('/user/update-profile', [AuthController::class, 'updateProfile']);
+Route::middleware('auth:sanctum')->group(function () {
+    Route::get('/funds', [WalletUMKMController::class, 'tracking']);
+    Route::post('/investments/propose', [InvestmentController::class, 'propose']);
+    Route::post('/dividends/send', [DividendController::class, 'send']);
+    Route::get('/dividends/received', [DividendController::class, 'received']);
+    Route::get('/projects/{id}/progress', [ProjectController::class, 'progress']);
+    Route::post('/stories', [StoryController::class, 'store']);
+    Route::get('/stories', [StoryController::class, 'index']);
+});

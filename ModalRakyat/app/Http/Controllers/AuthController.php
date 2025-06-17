@@ -98,12 +98,6 @@ class AuthController extends Controller
         return response()->json(['message' => 'Role changed to ' . $newRoleName]);
     }
 
-    public function logout(Request $request)
-    {
-        $request->user()->currentAccessToken()->delete();
-        return response()->json(['message' => 'Logged out successfully']);
-    }
-
     public function updateProfile(Request $request)
     {
         $user = $request->user();
