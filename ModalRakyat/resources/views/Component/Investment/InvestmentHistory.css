@@ -1,0 +1,65 @@
+#investment-history-container {
+    padding: 10px 40px;
+}
+
+.investment-history-item {
+    border: 1px solid;
+    border-radius: 10px;
+    margin: 20px 0px;
+}
+
+#investment-history-heading {
+    padding: 20px 10px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5vh;
+}
+
+#investment-umkm-name {
+    margin-right: 10px;
+}
+
+#investment-history-separator {
+    font-size: 27px;
+}
+
+#investment-history-action {
+    font-size: 28px;
+    font-weight: bolder;
+}
+
+#investment-history-date {
+    font-size: 20px;
+    font-weight: 300;
+    text-align: right;
+    margin-left: auto;
+}
+
+#investment-history-detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.investment-history-detail-item {
+    flex: 1 1 150px;
+}
+
+.investment-history-value {
+    font-weight: lighter;
+}
+
+#history-see-porto-detail-button button {
+    width: 168px;
+    height: 55px;
+    border-radius: 10px;
+    box-shadow: none;
+    color: #fff;
+    font-weight: 500;
+    border-color: #FBA518;
+    background-color: #FBA518;
+}

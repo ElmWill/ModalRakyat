@@ -1,7 +1,6 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import Navbar from '../Component/Navbar/Navbar'
 import Menu from '../Component/Investment/Menu'
-import Balance from '../Component/Balance/Balance'
 import Portofolio from '../Component/Investment/Portofolio'
 import InvestmentHistory from '../Component/Investment/InvestmentHistory'
 
@@ -12,12 +11,9 @@ const Investment = () => {
 
     return (
         <div>
-            <Navbar/>
+            <Navbar />
             <Menu activeMenu={activeMenu} onMenuClick={setActiveMenu} />
-            <Balance 
-            balance={balance}
-            invest={invest} />
-            {activeMenu === 'portofolio' && <Portofolio />}
+            {activeMenu === 'portofolio' && <Portofolio balance={balance} invest={invest} />}
             {activeMenu === 'riwayat' && <InvestmentHistory />}
         </div>
     )
