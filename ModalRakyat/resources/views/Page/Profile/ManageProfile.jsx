@@ -1,4 +1,5 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef} from 'react'
+import { useNavigate } from 'react-router-dom'
 import defaultProfile from '../../assets/profile-image.png'
 import './ManageProfile.css'
 
@@ -11,6 +12,7 @@ const ManageProfile = () => {
     const [phone, setPhone] = useState("08123456789");
 
     const fileInputRef = useRef(null);
+    const navigate = useNavigate();
 
     const handleImageChange = (e) => {
         const file = e.target.files[0];
@@ -34,6 +36,7 @@ const ManageProfile = () => {
             console.log("Data disimpan:");
             console.log({ name, email, phone, image });
             alert("Profil berhasil disimpan!");
+            navigate('/home')
         } else {
             alert("Penyimpanan dibatalkan.");
         }

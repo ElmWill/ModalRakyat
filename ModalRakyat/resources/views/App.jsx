@@ -8,6 +8,7 @@ import UMKM from './Page/UMKM'
 import ManageProfile from './Page/Profile/ManageProfile'
 import MyWalletUMKM from './Page/MyWallet/MyWalletUMKM'
 import Investment from './Page/Investment'
+import Trade from './Page/Trade/Trade'
 import HomeAfterUMKM from './Page/HomeAfterUMKM'
 import Funding from './Page/Funding/Funding' // path-nya disesuaikan yaa bro
 
@@ -26,6 +27,7 @@ const App = () => {
         <Route path="/my-wallet" element={<MyWalletUMKM/>} />
         <Route path="/investment" element={<Investment/>} />
         <Route path="/funding" element={<Funding/>} />
+        <Route path="/trade" element={<Trade/>} />
       </Routes>
     </Router>
   )
