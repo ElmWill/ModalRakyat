@@ -24,7 +24,7 @@ const Navbar = () => {
                 <li><Link to="/home">Home</Link></li>    
                 <li><Link to="/umkm">UMKM</Link></li>
                 <li><Link to="/investment">Investment</Link></li>
-                <li><Link to="/">Trade</Link></li>
+                <li><Link to="/trade">Trade</Link></li>
               </ul>
               <div id="profile" onClick={toggleOverlay}>
                 <img src={profile} alt="Logo Profile" />

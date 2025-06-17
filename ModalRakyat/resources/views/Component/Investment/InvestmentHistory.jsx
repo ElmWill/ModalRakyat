@@ -13,6 +13,7 @@ const InvestmentHistory = () => {
         {
             umkmName: 'UMKM A',
             action: 'BUY',
+            date: '17 Juni 2025',
             ownership: '20%',
             totalInvestasi: 50000000,
             dividenYield: 0.11, // 11%
@@ -21,6 +22,7 @@ const InvestmentHistory = () => {
         {
             umkmName: 'UMKM B',
             action: 'SELL',
+            date: '17 Juni 2025',
             ownership: '10%',
             totalInvestasi: 30000000,
             dividenYield: 0.05, // 5%
@@ -52,7 +54,7 @@ const InvestmentHistory = () => {
                             >
                                 {item.action}
                             </div>
-                            <h2 id='investment-history-date'>{formattedDate}</h2>
+                            <h2 id='investment-history-date'>{item.date}</h2>
                         </div>
                         <div id="investment-history-detail">
                             <div className="investment-history-detail-item">
