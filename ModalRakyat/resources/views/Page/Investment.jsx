@@ -1,41 +1,26 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import './Navbar.css'
-import modalrakyat_logo from '../../assets/modal rakyat_warna2.png'
-import profile from '../../assets/profile-image.png'
-import ProfileOverlay from '../Overlay/InvestorOverlay'
+import React, {useState} from 'react'
+import Navbar from '../Component/Navbar/Navbar'
+import Menu from '../Component/Investment/Menu'
+import Balance from '../Component/Balance/Balance'
+import Portofolio from '../Component/Investment/Portofolio'
+import InvestmentHistory from '../Component/Investment/InvestmentHistory'
 
-const Navbar = () => {
-    const [showOverlay, setShowOverlay] = useState(false);
+const Investment = () => {
+    const [balance] = useState(20000000) // "Saldo Anda", nanti ambil data dari backend
+    const [invest] = useState(200000000) // "Saldo Diinvestasikan", nanti ambul data dari backend
+    const [activeMenu, setActiveMenu] = useState('portofolio')
 
-    const toggleOverlay = () => {
-        setShowOverlay(prev => !prev);
-    };
-
-    const closeOverlay = () => {
-        setShowOverlay(false);
-    };
     return (
-        <div className="nav">
-        <div className='navbar'>
-            <img src={modalrakyat_logo} alt="" className='logo'/>
-            <div className="nav-right">
-                <ul>
-                    <li><Link to="/home">Home</Link></li>    
-                    <li><Link to="/umkm">UMKM</Link></li>
-                    <li><Link to="/investment">Investment</Link></li>
-                    <li><Link to="/">Trade</Link></li>
-                </ul>
-                <div id="profile" onClick={toggleOverlay}>
-                    <img src={profile} alt="Logo Profile" />
-                </div>
-                
-            </div>
-        </div>
-        <div className="nav-line"></div>
-        {showOverlay && <ProfileOverlay onClose={closeOverlay} />}
+        <div>
+            <Navbar/>
+            <Menu activeMenu={activeMenu} onMenuClick={setActiveMenu} />
+            <Balance 
+            balance={balance}
+            invest={invest} />
+            {activeMenu === 'portofolio' && <Portofolio />}
+            {activeMenu === 'riwayat' && <InvestmentHistory />}
         </div>
     )
 }
 
-export default Navbar
+export default Investment
