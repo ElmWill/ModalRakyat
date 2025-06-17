@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom';
 import './Login.css'
 import modalrakyat_logo from '../../assets/modal rakyat_warna2.png'
+import axios from 'axios';
+
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -19,19 +21,41 @@ const Login = () => {
         return regex.test(password);
     };
 
-    const handleLogin = () => {
+    const handleLogin = async () => {
         if (!validateEmail(email)) {
             setError('Alamat email tidak valid. Harus mengandung "@"');
-        } 
-        else if (!validatePassword(password)) {
+            return;
+        }
+        if (!validatePassword(password)) {
             setError('Password minimal 8 karakter, mengandung 1 angka dan 1 karakter spesial.');
-        } 
-        else {
+            return;
+        }
+
+        try {
+            const response = await axios.post('http://localhost:8000/api/login', {
+                email,
+                password
+            });
+
+            const { token, user } = response.data;
+
+            // Simpan token di localStorage
+            localStorage.setItem('token', token);
+            localStorage.setItem('user', JSON.stringify(user));
+
             setError('');
             alert('Login berhasil!');
             navigate('/home');
+
+        } catch (error) {
+            if (error.response && error.response.status === 401) {
+                setError('Email atau password salah.');
+            } else {
+                setError('Akun tidak ditemukan. Silakan daftar terlebih dahulu.');
+            }
         }
     };
+
     return (
     <div className="login-page">
         <div className='modal-rakyat-logo'>
