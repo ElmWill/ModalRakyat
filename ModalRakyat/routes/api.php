@@ -37,25 +37,9 @@ Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
 
 Route::middleware('auth:sanctum')->group(function () {
-    Route::get('/user', function (Request $request) {
-        return response()->json($request->user());
-    });
-    Route::post('/logout', function (Request $request) {
-        $request->user()->currentAccessToken()->delete();
-        return response()->json(['message' => 'Logged out']);
-    });
+    Route::get('/user/profile', [AuthController::class, 'profile']);
+    Route::post('/logout', [AuthController::class, 'logout']);
+    Route::post('/switch-role', [AuthController::class, 'switchRole']);
 });
 
-Route::middleware('auth:sanctum')->post('/switch-role', function (Request $request) {
-    $role = Role::where('name', $request->role)->firstOrFail();
-    $user = $request->user();
-
-    if (!$user->roles->contains($role)) {
-        return response()->json(['error' => 'User does not have this role'], 403);
-    }
-
-    $user->active_role = $role->id;
-    $user->save();
-
-    return response()->json(['message' => 'Switched to ' . $role->name]);
-});
+Route::middleware('auth:sanctum')->put('/user/update-profile', [AuthController::class, 'updateProfile']);
