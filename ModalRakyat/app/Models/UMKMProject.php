@@ -10,6 +10,7 @@ class UMKMProject extends Model
     use HasFactory;
 
     protected $table = 'umkm_projects';
+
     protected $primaryKey = 'projectID';
 
     public $incrementing = true;
@@ -24,19 +25,15 @@ class UMKMProject extends Model
         'campaignStartDate',
         'campaignEndDate',
         'projectStatus',
-        'businessPlanURL',
+        'proposalURL',
         'financialProjectionURL',
         'projectImageVideoURLs',
     ];
 
-    public function getRouteKeyName(){
-        return 'projectID';
-    }
-
     protected $casts = [
-        'fundingTarget' => 'decimal:2',
-        'amountRaised' => 'decimal:2',
-        'interestRate' => 'decimal:2',
+        'fundingTarget' => 'float',
+        'amountRaised' => 'float',
+        'interestRate' => 'float',
         'campaignStartDate' => 'date',
         'campaignEndDate' => 'date',
         'projectImageVideoURLs' => 'array',
@@ -49,26 +46,21 @@ class UMKMProject extends Model
 
     public function investments()
     {
-        return $this->hasMany(Investment::class, 'projectID', 'projectID');
+        return $this->hasMany(ProposeInvestment::class, 'projectID', 'projectID');
     }
 
-    public function watchingInvestor()
+    public function dividends()
     {
-        return $this->belongsToMany(
-            Investor::class,                  
-            'investor_project_watchlist',  
-            'projectID',  
-            'investorID'  
-        );
+        return $this->hasMany(Dividen::class, 'projectID', 'projectID');
     }
 
-    public function favoritedByInvestors()
+    public function fundingProgress()
     {
-        return $this->belongsToMany(
-        Investor::class,
-        'investor_project_favorites',
-        'projectID',
-        'investorID'
-        );
+        return $this->hasMany(FundingProgress::class, 'projectID', 'projectID');
+    }
+
+    public function successStories()
+    {
+        return $this->hasMany(SuccessStory::class, 'projectID', 'projectID');
     }
 }
