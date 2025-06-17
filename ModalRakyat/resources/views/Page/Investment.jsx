@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import './Navbar.css'
-import modalrakyat_logo from '../../assets/modal rakyat_warna2.png'
-import profile from '../../assets/profile-image.png'
-import ProfileOverlay from '../Overlay/InvestorOverlay'
+import '../Component/Navbar/Navbar.css'
+import modalrakyat_logo from '../assets/modal rakyat_warna2.png'
+import profile from '../assets/profile-image.png'
+import ProfileOverlay from '../Component/Overlay/InvestorOverlay'
 
 const Navbar = () => {
     const [showOverlay, setShowOverlay] = useState(false);
