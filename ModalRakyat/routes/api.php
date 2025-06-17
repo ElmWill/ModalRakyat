@@ -1,13 +1,15 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\FavoriteController;
+use App\Http\Controllers\SearchController;
 use App\Http\Controllers\UMKMProjectController;
 use App\Http\Controllers\WalletController;
 use App\Http\Controllers\WatchlistController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InvestorController;
-use App\Http\Controllers\Api\AuthController;
+use App\Models\Role;
 
 Route::prefix('investor')->name('investor.')->group(function () {
     Route::get('/dashboard', [InvestorController::class, 'index'])->name('dashboard');
@@ -25,7 +27,8 @@ Route::prefix('favorites')->name('favorites.')->group(function () {
     Route::delete('/{project:projectID}', [FavoriteController::class, 'destroy'])->name('remove');
 });
 
-Route::get('/projects', [UMKMProjectController::class, 'index'])->name('projects.index');
+Route::get('/projects', [SearchController::class, 'searchProjects'])->name('projects.search');
+Route::get('/projects/{project:projectID}', [UMKMProjectController::class, 'show'])->name('projects.show');
 
 Route::prefix('wallet')->name('wallet.')->group(function () {
     Route::post('/deposit', [WalletController::class, 'prepareDeposit'])->name('deposit.prepare');
