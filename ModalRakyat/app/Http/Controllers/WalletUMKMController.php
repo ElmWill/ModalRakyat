@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class WalletController extends Controller
+class WalletUMKMController extends Controller
 {
     public function tracking(Request $request)
     {
