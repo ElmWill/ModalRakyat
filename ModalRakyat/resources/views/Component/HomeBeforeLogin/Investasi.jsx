@@ -1,4 +1,5 @@
 import React from 'react'
+import investmentVideo from '../../assets/Investment-video.mp4'
 import './Investasi.css'
 
 const Investasi = () => {
@@ -15,7 +16,9 @@ const Investasi = () => {
               berupa <strong>persentase yang disepakati</strong> dari NET PROFIT.
           </p>
         </div>
-        <div className="image-placeholder"></div>
+        <div className="investment-video">
+          <video src={investmentVideo} autoPlay muted loop playsInline />
+        </div>
     </div>
   )
 }
