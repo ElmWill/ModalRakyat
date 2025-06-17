@@ -1,6 +1,6 @@
 import React from 'react'
 import './Footer.css'
-import modalrakyat_logo from '../../assets/logo.jpeg'
+import footer_icon from '../../assets/footer-icon.png'
 import email_icon from '../../assets/email.png'
 import telephone_icon from '../../assets/telephone.png'
 import linkedin_icon from '../../assets/linkedin.png'
@@ -15,8 +15,7 @@ const Footer = () => {
         <div className="footer-content">
             <div className="footer-brand">
                 <div className="brand-logo">
-                    <img src="" alt="" />
-                    <img src={modalrakyat_logo} alt="Modal Rakyat Logo" className="footer-logo-image" />
+                    <img src={footer_icon} alt="Modal Rakyat Logo" className="footer-logo-image" />
                 </div>
                 <div className="brand-text">
                     <h1>Modal Rakyat</h1>
