@@ -19,7 +19,7 @@ const InvestorOverlay = ({ onClose }) => {
                     <img src={wallet} alt="" />
                     <li><button>Dompet Saya</button></li>   
                 </Link>
-                <Link to="/" id="overlay-content">
+                <Link to="/umkm-home" id="overlay-content">
                     <img src={switchs} alt="" />
                     <li><button>Beralih ke UMKM</button></li>   
                 </Link>
