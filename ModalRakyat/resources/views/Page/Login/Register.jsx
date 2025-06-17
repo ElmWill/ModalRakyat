@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
+import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
 import './Register.css'
 import modalrakyat_logo from '../../assets/modal rakyat_warna2.png'
 
 const Register = () => {
+    const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
@@ -18,25 +20,48 @@ const Register = () => {
         return regex.test(pw);
     }
 
-    const handleRegister = () => {
+    const handleRegister = async () => {
+        if (!name) {
+            setError('Nama lengkap tidak boleh kosong.');
+            return;
+        }
         if (!email.includes('@')) {
             setError('Alamat email tidak valid. Harus mengandung "@"');
+            return;
         }
-        else if (!validatePassword(password)) {
+        if (!validatePassword(password)) {
             setError('Password harus minimal 8 karakter, mengandung huruf kapital, huruf kecil, dan karakter spesial.');
-        } 
-        else if (password !== confirmPassword) {
-            setError('Konfirmasi password tidak cocok.');
-        } 
-        else if (!agree) {
-            setError('Anda harus menyetujui syarat dan ketentuan.');
-        } 
-        else {
-            setError('');
-            alert('Akun berhasil dibuat!');
-            navigate('/home');
+            return;
         }
-    }
+        if (password !== confirmPassword) {
+            setError('Konfirmasi password tidak cocok.');
+            return;
+        }
+        if (!agree) {
+            setError('Anda harus menyetujui syarat dan ketentuan.');
+            return;
+        }
+
+        try {
+            const response = await axios.post('http://localhost:8000/api/register', {
+                name,
+                email,
+                password
+            });
+
+            alert('Akun berhasil dibuat!');
+            navigate('/login');
+        } catch (error) {
+            if (error.response && error.response.status === 422) {
+                const errors = error.response.data.errors;
+                const firstError = Object.values(errors)[0][0];
+                setError(firstError);
+            } else {
+                setError('Terjadi kesalahan saat registrasi.');
+            }
+        }
+    };
+
 
     return (
         <div className="register-page">
@@ -48,6 +73,15 @@ const Register = () => {
                 <p className="login-link">
                     Sudah punya akun? <Link to="/login">Masuk</Link>
                 </p>
+
+                <label>Nama Lengkap <span className="required">*</span></label>
+                <input
+                    type="text"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    placeholder="Nama lengkap kamu"
+                />
+
                 
                 <label>Alamat Email <span className="required">*</span></label>
                 <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="jackman@gmail.com" />
