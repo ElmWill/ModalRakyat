@@ -3,7 +3,7 @@ import Navbar from '../../Component/Navbar/Navbar'
 import './Trade.css'
 
 const Trade = () => {
-    const [balance, setBalance] = useState(100000000) // contoh saldo Rp.100.000.000, nanti ambil dari backend
+    const [balance, setBalance] = useState(50000000) // contoh saldo Rp.50.000.000, nanti ambil dari backend
     const [showOverlay, setShowOverlay] = useState(false)
     const [selectedTrade, setSelectedTrade] = useState(null)
     const [error, setError] = useState('')
@@ -17,20 +17,20 @@ const Trade = () => {
 
     const trades = [
         {
-            name: 'UMKM A',
-            sellValue: 50000000,
+            name: 'Toko Kemanggisan',
+            sellValue: 5000000,
             sellDate: '17 Juni 2025',
-            ownership: '20%',
-            yield: 0.15,
-            unit: 500,
+            ownership: '50%',
+            yield: 0.11,
+            unit: 50,
         },
         {
-            name: 'UMKM B',
+            name: 'Makaroni Ngehe',
             sellValue: 75000000,
             sellDate: '17 Juni 2025',
-            ownership: '30%',
-            yield: 0.1,
-            unit: 750,
+            ownership: '15%',
+            yield: 0.08,
+            unit: 75,
         },
     ]
 

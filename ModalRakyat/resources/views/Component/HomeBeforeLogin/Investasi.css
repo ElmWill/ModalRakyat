@@ -18,9 +18,17 @@
     font-family: 'Urbanist', sans-serif;
 }
 
-.investasi-container .image-placeholder {
+.investasi-container .investment-video {
     width: 560px;
     height: 310px;
     background-color: #d3d3d3;
     border-radius: 20px;
+}
+
+.investment-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
 }

@@ -12,6 +12,7 @@ import FundingManagement from './Page/FundingManagement'
 import Trade from './Page/Trade/Trade'
 import HomeAfterUMKM from './Page/HomeAfterUMKM' // path-nya disesuaikan yaa bro
 
+import UMKMDetail from './Page/UMKMDetail'
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
         <Route path="/investment" element={<Investment/>} />
         <Route path="/funding-management" element={<FundingManagement/>} />
         <Route path="/trade" element={<Trade/>} />
+        <Route path="/detail" element={<UMKMDetail/>} />
       </Routes>
     </Router>
   )

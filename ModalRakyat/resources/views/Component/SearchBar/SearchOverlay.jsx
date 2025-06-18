@@ -1,129 +1,71 @@
-import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
-import wartegKemuning from '../../assets/Warteg Kemuning.png'
-import './SearchOverlay.css'
+import React from 'react'
+import wartegKemuning from '../../../assets/Warteg Kemuning.png'
+import tokoKemanggisan from '../../../assets/toko-kemanggisan.webp'
+import rocky from '../../../assets/rocky.jpg'
+import narunaCeramic from '../../../assets/naruna-ceramic.jpg'
+import './RecommendedUMKM.css'
 
-const SearchOverlay = ({ searchQuery }) => {
-    const [results, setResults] = useState([])
-    const [showOverlay, setShowOverlay] = useState(false)
+const createUMKM = (name, category, progress, totalPendanaan, image) => ({
+  name,
+  category,
+  progress,
+  totalPendanaan,
+  image,
+  status: progress === 100 ? 'Done' : 'On Progress'
+})
 
-    const handleSearch = async () => {
-        // Connect to backend nanti di sini
-        const mockData = [
-            {
-                id: 1,
-                name: 'Warteg Kemuning',
-                category: 'Food and Beverage',
-                progress: 70,
-                description:
-                    'Warteg Kemuning adalah warteg masakan rumahan, tidak memasak makanan fast food, semuanya real food...',
-                totalPendanaan: 'Rp.100.000.000',
-                totalInvestor: 78,
-                image: wartegKemuning,
-                detailLink: '#',
-            },
-            {
-                id: 2,
-                name: 'Warteg Kemuning',
-                category: 'Food and Beverage',
-                progress: 70,
-                description:
-                    'Warteg Kemuning adalah warteg masakan rumahan, tidak memasak makanan fast food, semuanya real food...',
-                totalPendanaan: 'Rp.100.000.000',
-                totalInvestor: 78,
-                image: wartegKemuning,
-                detailLink: '#',
-            },
-            {
-                id: 3,
-                name: 'Warteg Kemuning',
-                category: 'Food and Beverage',
-                progress: 70,
-                description:
-                    'Warteg Kemuning adalah warteg masakan rumahan, tidak memasak makanan fast food, semuanya real food...',
-                totalPendanaan: 'Rp.100.000.000',
-                totalInvestor: 78,
-                image: wartegKemuning,
-                detailLink: '#',
-            },
-        ]
-
-        const filtered = mockData.filter((item) =>
-            item.name.toLowerCase().includes(searchQuery.toLowerCase())
-        )
-        setResults(filtered)
-        setShowOverlay(true)
-    }
-
-    useEffect(() => {
-        if (searchQuery) {
-            handleSearch()
-        }
-    }, [searchQuery])
-
-    useEffect(() => {
-        if (showOverlay) {
-            document.body.style.overflow = 'hidden'
-        } else {
-            document.body.style.overflow = 'auto'
-        }
-    }, [showOverlay])
+const umkmList = [
+  createUMKM('Warteg Kemuning', 'Food and Beverage', 70, 100000000, wartegKemuning),
+  createUMKM('Toko Kemanggisan', 'Retail', 95, 500000000, tokoKemanggisan),
+  createUMKM('Rocky Fried Chicken', 'Food and Beverage', 85, 300000000, rocky),
+  createUMKM('Naruna Ceramic', 'Manufactur', 75, 300000000, narunaCeramic),
+]
 
 
-    if (!showOverlay) return null
-
-    return (
-        <div id="search-overlay">
-            <button id="search-close-button" onClick={() => setShowOverlay(false)}>✕</button>
-            <div id="search-overlay-content">
-                {results.length === 0 ? (
-                    <p id="search-not-found">"{searchQuery}" tidak ditemukan</p>
-                ) : (
-                    results.map((umkm, index) => (
-                        <React.Fragment key={index}>
-                            <div id='search-cards-container'>
-                                <img src={umkm.image} alt={umkm.name} />
-                                <li id='card-info'>
-                                    <a href={umkm.detailLink} id='card-link'>
-                                        <h1>{umkm.name}</h1>
-                                        <div id='category'>
-                                            <h2>{umkm.category}</h2>
-                                            <p>{umkm.progress}%</p>
-                                        </div>
-                                        <p id='description'>
-                                            {umkm.description.length > 350
-                                                ? `${umkm.description.slice(0, 350)}...`
-                                                : umkm.description}
-                                        </p>
-                                        <div id='progress-bar'>
-                                            <div
-                                                id='progress-bar-color'
-                                                style={{ width: `${umkm.progress}%` }}
-                                            ></div>
-                                        </div>
-                                        <div id='pendanaan'>
-                                            <h3>Total Pendanaan</h3>
-                                            <h3 id='urbanist'>{umkm.totalPendanaan}</h3>
-                                        </div>
-                                        <div id='investor'>
-                                            <h3>Total Investor</h3>
-                                            <h3 id='urbanist'>{umkm.totalInvestor}</h3>
-                                        </div>
-                                    </a>
-                                    <div id='invest-button'>
-                                        <Link to={umkm.detailLink}>
-                                            <button id='invest'>Invest</button>
-                                        </Link>
-                                    </div>
-                                </li>
-                            </div>
-                            <div id='line'></div>
-                        </React.Fragment>
-                    ))
-                )}
-            </div>
+// Komponen kartu UMKM
+const UMKMCard = ({ name, category, progress, totalPendanaan, image, status }) => (
+  <li className="card-item">
+    <a href="/detail" className="card-link">
+      <img src={image} alt="Card Image" className="card-image" />
+      <div className={`status-badge-umkm ${status === 'Done' ? 'done' : 'on-progress'}`}>
+          {status}
         </div>
-    )
+      <div className="card-link-item">
+        <h1>{name}</h1>
+        <h2>{category}</h2>
+        <div className="progress-pendanaan">
+          <p>{progress}%</p>
+          <div className="progress-bar">
+            <div
+              className="progress-bar-color"
+              style={{ width: `${progress}%` }}
+            ></div>
+          </div>
+        </div>
+        <div className="pendanaan">
+          <h3>Total Pendanaan</h3>
+          <h3>Rp.{totalPendanaan.toLocaleString('id-ID')}</h3>
+        </div>
+      </div>
+    </a>
+  </li>
+)
+
+const RecommendedUMKM = () => {
+  return (
+    <div id="recommended-umkm">
+        <div className="recommended-umkm-header">
+            <h1>Recommend</h1>
+        </div>
+        <div className="card-wrapper">
+            <ul className="card-list">
+                {umkmList.map((umkm, index) => (
+                <UMKMCard key={index} {...umkm} />
+                ))}
+            </ul>
+        </div>
+    </div>
+  )
 }
 
-export default SearchOverlay
+export default RecommendedUMKM

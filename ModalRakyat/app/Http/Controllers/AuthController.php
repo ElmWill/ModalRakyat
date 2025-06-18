@@ -17,9 +17,9 @@ class AuthController extends Controller
         Log::info('Register Request', $request->all());
 
         $request->validate([
-            'name' => 'required|string',
-            'email' => 'required|email|unique:users',
-            'password' => 'required|min:8'
+            'name' => 'required|string|min:5|max:255',
+            'email' => 'required|string|email|unique:users',
+            'password' => 'required|string|min:8|confirmed'
         ]);
 
         $investorRole = Role::where('name', 'investor')->first();
@@ -86,7 +86,7 @@ class AuthController extends Controller
             return response()->json(['message' => 'User does not have the role: ' . $newRoleName], 403);
         }
 
-        $newRole = \App\Models\Role::where('name', $newRoleName)->first();
+        $newRole = Role::where('name', $newRoleName)->first();
 
         if (!$newRole) {
             return response()->json(['message' => 'Role not found'], 500);
