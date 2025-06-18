@@ -17,20 +17,20 @@ const Trade = () => {
 
     const trades = [
         {
-            name: 'UMKM A',
-            sellValue: 50000000,
+            name: 'Toko Kemanggisan',
+            sellValue: 5000000,
             sellDate: '17 Juni 2025',
-            ownership: '20%',
-            yield: 0.15,
-            unit: 500,
+            ownership: '50%',
+            yield: 0.11,
+            unit: 50,
         },
         {
-            name: 'UMKM B',
+            name: 'Makaroni Ngehe',
             sellValue: 75000000,
             sellDate: '17 Juni 2025',
-            ownership: '30%',
-            yield: 0.1,
-            unit: 750,
+            ownership: '15%',
+            yield: 0.08,
+            unit: 75,
         },
     ]
 

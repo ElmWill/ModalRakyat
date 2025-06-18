@@ -3,10 +3,10 @@ import './Portofolio.css'
 import Balance from '../Balance/Balance'
 
 const dataPortofolio = [
-    { name: 'UMKM A', ownership: '20%', investment: 500000000, dividend: 0 },
-    { name: 'UMKM B', ownership: '20%', investment: 500000000, dividend: 0 },
-    { name: 'UMKM C', ownership: '20%', investment: 500000000, dividend: 0 },
-    { name: 'UMKM D', ownership: '20%', investment: 500000000, dividend: 0 }
+    { name: 'Warteg Kemuning', ownership: '50%', investment: 50000000, dividend: 0 },
+    { name: 'Gonegani', ownership: '7.14%', investment: 50000000, dividend: 0 },
+    { name: 'Makaroni Ngehe', ownership: '16.6%', investment: 50000000, dividend: 0 },
+    { name: 'Rocky Fried Chicken', ownership: '16.6%', investment: 50000000, dividend: 0 }
 ]
 
 const Portofolio = ({ balance, invest }) => {

@@ -25,7 +25,7 @@ const DetailUMKM = () => {
                     </div>
                     <div id="detail-umkm-info-2">
                         <h2>Food and Beverage</h2>
-                        <p>70%</p>
+                        <p>76%</p>
                     </div>
                     <p id='description'>
                         Warteg Kemuning adalah warteg masakan rumahan, tidak memasak makanan fast food, semuanya real food dengan harga yang terjangkau mulai dari ayam, ikan, telur, dan lain lainWarteg Kemuning adalah warteg masakan rumahan, tidak memasak makanan fast food, semuanya real food dengan harga yang terjangkau mulai dari ayam, ikan, telur, dan lain lainWarteg Kemuninggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
@@ -33,7 +33,7 @@ const DetailUMKM = () => {
                     <div id='progress-bar'>
                         <div
                             id='progress-bar-color'
-                            style={{ width: `${76}%` }}
+                            style={{ width: `${70}%` }}
                         ></div>
                     </div>
                     <div id="detail-umkm-info-3">
@@ -62,9 +62,9 @@ const DetailUMKM = () => {
                     <div id="investasi-left-label">Pendanaan yang tersisa</div>
 
                     <div className="investasi-amount-container">
-                        <div className="investasi-amount">Rp 24.000.000</div>
+                        <div className="investasi-amount">Rp 30.000.000</div>
                         <div className="investasi-divider"></div>
-                        <div className="investasi-amount">Rp 100.000.000</div>
+                        <div className="investasi-amount">Rp 20.000.000</div>
                     </div>
                     
                     <div id="investasi-right-label">Dana Anda</div>
