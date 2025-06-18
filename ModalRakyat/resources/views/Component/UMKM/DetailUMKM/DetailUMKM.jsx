@@ -25,7 +25,7 @@ const DetailUMKM = () => {
                     </div>
                     <div id="detail-umkm-info-2">
                         <h2>Food and Beverage</h2>
-                        <p>76%</p>
+                        <p>70%</p>
                     </div>
                     <p id='description'>
                         Warteg Kemuning adalah warteg masakan rumahan, tidak memasak makanan fast food, semuanya real food dengan harga yang terjangkau mulai dari ayam, ikan, telur, dan lain lainWarteg Kemuning adalah warteg masakan rumahan, tidak memasak makanan fast food, semuanya real food dengan harga yang terjangkau mulai dari ayam, ikan, telur, dan lain lainWarteg Kemuninggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg

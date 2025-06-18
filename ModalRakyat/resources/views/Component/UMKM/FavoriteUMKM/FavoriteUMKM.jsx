@@ -27,7 +27,7 @@ const umkmList = [
 // Komponen kartu UMKM
 const UMKMCard = ({ name, category, progress, totalPendanaan, image, status }) => (
   <li className="card-item">
-    <a href="#" className="card-link">
+    <a href="/detail" className="card-link">
       <img src={image} alt="Card Image" className="card-image" />
       <div className={`status-badge-umkm ${status === 'Done' ? 'done' : 'on-progress'}`}>
           {status}
