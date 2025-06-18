@@ -1,5 +1,8 @@
 import React from 'react'
 import wartegKemuning from '../../../assets/Warteg Kemuning.png'
+import tokoKemanggisan from '../../../assets/toko-kemanggisan.webp'
+import rocky from '../../../assets/rocky.jpg'
+import narunaCeramic from '../../../assets/naruna-ceramic.jpg'
 import './RecommendedUMKM.css'
 
 const createUMKM = (name, category, progress, totalPendanaan, image) => ({
@@ -12,11 +15,10 @@ const createUMKM = (name, category, progress, totalPendanaan, image) => ({
 })
 
 const umkmList = [
-  createUMKM('Warteg Kemuning', 'Food and Beverage', 70, 'Rp.100.000.000', wartegKemuning),
-  createUMKM('Warteg Kemuning', 'Food and Beverage', 100, 'Rp.100.000.000', wartegKemuning),
-  createUMKM('Warteg Kemuning', 'Food and Beverage', 70, 'Rp.100.000.000', wartegKemuning),
-  createUMKM('Warteg Kemuning', 'Food and Beverage', 70, 'Rp.100.000.000', wartegKemuning),
-  createUMKM('Warteg Kemuning', 'Food and Beverage', 70, 'Rp.100.000.000', wartegKemuning)
+  createUMKM('Warteg Kemuning', 'Food and Beverage', 70, 100000000, wartegKemuning),
+  createUMKM('Toko Kemanggisan', 'Retail', 95, 5000000, tokoKemanggisan),
+  createUMKM('Rocky Fried Chicken', 'Food and Beverage', 85, 300000000, rocky),
+  createUMKM('Naruna Ceramic', 'Manufactur', 75, 300000000, narunaCeramic),
 ]
 
 
@@ -42,7 +44,7 @@ const UMKMCard = ({ name, category, progress, totalPendanaan, image, status }) =
         </div>
         <div className="pendanaan">
           <h3>Total Pendanaan</h3>
-          <h3>{totalPendanaan}</h3>
+          <h3>Rp.{totalPendanaan.toLocaleString('id-ID')}</h3>
         </div>
       </div>
     </a>

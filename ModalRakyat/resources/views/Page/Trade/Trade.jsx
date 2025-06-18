@@ -3,7 +3,7 @@ import Navbar from '../../Component/Navbar/Navbar'
 import './Trade.css'
 
 const Trade = () => {
-    const [balance, setBalance] = useState(100000000) // contoh saldo Rp.100.000.000, nanti ambil dari backend
+    const [balance, setBalance] = useState(50000000) // contoh saldo Rp.50.000.000, nanti ambil dari backend
     const [showOverlay, setShowOverlay] = useState(false)
     const [selectedTrade, setSelectedTrade] = useState(null)
     const [error, setError] = useState('')

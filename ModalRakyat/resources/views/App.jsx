@@ -9,6 +9,7 @@ import ManageProfile from './Page/Profile/ManageProfile'
 import MyWalletUMKM from './Page/MyWallet/MyWalletUMKM'
 import Investment from './Page/Investment'
 import Trade from './Page/Trade/Trade'
+import UMKMDetail from './Page/UMKMDetail'
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
         <Route path="/my-wallet" element={<MyWalletUMKM/>} />
         <Route path="/investment" element={<Investment/>} />
         <Route path="/trade" element={<Trade/>} />
+        <Route path="/detail" element={<UMKMDetail/>} />
       </Routes>
     </Router>
   )
