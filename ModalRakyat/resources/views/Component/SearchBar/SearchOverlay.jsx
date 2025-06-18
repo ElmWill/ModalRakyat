@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import wartegKemuning from '../../assets/Warteg Kemuning.png'
+import makaroniNgehe from '../../assets/makaroni-ngehe.jpg'
+import gonegani from '../../assets/gonegani.jpeg'
+// import narunaCeramic from '../../assets/naruna-ceramic.jpg'
+// import fifikayLaundry from '../../assets/fifikay-laundry.webp'
+// import tokoKemanggisan from '../../assets/toko-kemanggisan.webp'
+// import rocky from '../../assets/rocky.jpg'
 import './SearchOverlay.css'
 
 const SearchOverlay = ({ searchQuery }) => {
@@ -17,33 +23,33 @@ const SearchOverlay = ({ searchQuery }) => {
                 progress: 70,
                 description:
                     'Warteg Kemuning adalah warteg masakan rumahan, tidak memasak makanan fast food, semuanya real food...',
-                totalPendanaan: 'Rp.100.000.000',
+                totalPendanaan: 100000000,
                 totalInvestor: 78,
                 image: wartegKemuning,
-                detailLink: '#',
+                detailLink: '/detail',
             },
             {
                 id: 2,
-                name: 'Warteg Kemuning',
+                name: 'Makaroni Ngehe',
                 category: 'Food and Beverage',
-                progress: 70,
+                progress: 100,
                 description:
-                    'Warteg Kemuning adalah warteg masakan rumahan, tidak memasak makanan fast food, semuanya real food...',
-                totalPendanaan: 'Rp.100.000.000',
-                totalInvestor: 78,
-                image: wartegKemuning,
+                'Makaroni Ngehe adalah Tempat menjual makaroni yang sedang ngehits, kini sudah terbuka banyak cabang di Jakarta',
+                totalPendanaan: 500000000,
+                totalInvestor: 30,
+                image: makaroniNgehe,
                 detailLink: '#',
             },
             {
                 id: 3,
-                name: 'Warteg Kemuning',
-                category: 'Food and Beverage',
-                progress: 70,
+                name: 'Gonegani',
+                category: 'Fashion',
+                progress: 50,
                 description:
-                    'Warteg Kemuning adalah warteg masakan rumahan, tidak memasak makanan fast food, semuanya real food...',
-                totalPendanaan: 'Rp.100.000.000',
-                totalInvestor: 78,
-                image: wartegKemuning,
+                "A Woman’s Most Fashionable Destination. Pengiriman Seluruh Indonesia. New Arrivals Every Weeks. High Quality Material. Brands: Elegant, Simple, New Arrivals Every Weeks.",
+                totalPendanaan: 700000000,
+                totalInvestor: 46,
+                image: gonegani,
                 detailLink: '#',
             },
         ]
@@ -103,7 +109,7 @@ const SearchOverlay = ({ searchQuery }) => {
                                         </div>
                                         <div id='pendanaan'>
                                             <h3>Total Pendanaan</h3>
-                                            <h3 id='urbanist'>{umkm.totalPendanaan}</h3>
+                                            <h3 id='urbanist'>Rp.{umkm.totalPendanaan.toLocaleString('id-ID')}</h3>
                                         </div>
                                         <div id='investor'>
                                             <h3>Total Investor</h3>

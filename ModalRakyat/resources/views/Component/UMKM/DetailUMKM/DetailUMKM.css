@@ -1,0 +1,163 @@
+#detail-umkm-container {
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#detail-umkm-heading img{
+    width: 520px;
+    height: 320px;
+    border-radius: 20px;
+    border: 2px solid black;
+}
+
+#detail-umkm-heading {
+    display: flex;
+    gap: 10px;
+}
+
+#detail-umkm-info {
+    margin: 10px 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#detail-umkm-info-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#detail-umkm-download-button {
+    display: flex;
+    gap: 10px;
+}
+
+#detail-umkm-download-button button {
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    font-family: 'Urbanist', sans-serif;
+    color: #fff;
+    background-color: #FBA518;
+    border: 1px solid #FBA518;
+    font-weight: 500;
+}
+
+#detail-umkm-info-2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#detail-umkm-info-2 h2 {
+    font-family: 'Urbanist', sans-serif;
+}
+
+#detail-umkm-info-2 p {
+    color: #808284;
+}
+
+.detail-umkm-info-3-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.detail-umkm-info-3-value {
+    font-family: 'Urbanist', sans-serif;
+}
+
+#detail-umkm-investasi-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+#investasi-left-label {
+    flex: 1;
+    text-align: left;
+    font-weight: 500;
+    font-family: 'Urbanist', sans-serif;
+}
+
+#investasi-right-label {
+    flex: 1;
+    text-align: right;
+    font-weight: 500;
+    font-family: 'Urbanist', sans-serif;
+}
+
+.investasi-amount-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-family: 'Urbanist', sans-serif;
+}
+
+.investasi-amount {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Urbanist', sans-serif;
+}
+
+.investasi-divider {
+    width: 1px;
+    height: 24px;
+    background-color: #000;
+}
+
+.calculator-control-wrapper {
+    display: flex;
+    align-items: center;
+    background-color: #d9d9d9;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.calculator-control-wrapper button {
+    width: 60px;
+    height: 50px;
+    font-size: 20px;
+    background-color: #d9d9d9;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+.value-display {
+    flex: 1;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.calculator-row {
+    margin-bottom: 20px;
+}
+
+.dividen-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin: 20px 0;
+}
+
+.calculator-investasi-buy-button {
+    width: 100%;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #70AF59;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
