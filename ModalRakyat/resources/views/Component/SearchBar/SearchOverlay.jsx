@@ -1,9 +1,9 @@
 import React from 'react'
-import wartegKemuning from '../../../assets/Warteg Kemuning.png'
-import tokoKemanggisan from '../../../assets/toko-kemanggisan.webp'
-import rocky from '../../../assets/rocky.jpg'
-import narunaCeramic from '../../../assets/naruna-ceramic.jpg'
-import './RecommendedUMKM.css'
+import wartegKemuning from '../../assets/Warteg Kemuning.png'
+import tokoKemanggisan from '../../assets/toko-kemanggisan.webp'
+import rocky from '../../assets/rocky.jpg'
+import narunaCeramic from '../../assets/naruna-ceramic.jpg'
+import '../UMKM/Recommended/RecommendedUMKM.css'
 
 const createUMKM = (name, category, progress, totalPendanaan, image) => ({
   name,

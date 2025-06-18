@@ -2,6 +2,12 @@
     padding: 10px 40px;
 }
 
+.myfunding-umkm-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .card-wrapper {
     display: flex;
     flex-wrap: nowrap;
@@ -119,3 +125,15 @@
 .status-badge-umkm.done {
     background-color: green;
 }
+
+/* #add-funding-button button {
+  width: 168px;
+  height: 55px;
+  border-radius: 10px;
+  box-shadow: none;
+  color: #333;
+  font-weight: 500;
+  border-color: #333;
+  background-color: white;
+} */
+

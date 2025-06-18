@@ -53,7 +53,10 @@ const MyFundingUMKM = () => {
   return (
     <div id="myfunding-umkm">
         <div className="myfunding-umkm-header">
-            <h1>My Funding</h1>
+          <h1>My Funding</h1>
+          <div id="add-funding-button">
+            <button>Add Funding</button>
+          </div>
         </div>
         <div className="card-wrapper">
             <ul className="card-list">

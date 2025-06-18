@@ -13,7 +13,7 @@ const FundingPending = () => {
         {
             umkmName: 'UMKM A',
             action: 'BUY',
-            date: '17 Juni 2025',
+            date: '18 Juni 2025',
             ownership: '20%',
             totalFundingPending: 50000000,
             dividenYield: 0.11, // 11%
@@ -59,15 +59,15 @@ const FundingPending = () => {
                         <div id="funding-pending-detail">
                             <div className="funding-pending-detail-item">
                                 <div className="funding-pending-label">
-                                    Persentase Kepemilikan
+                                    Valuasi Aset
                                 </div>
                                 <div className="funding-pending-value">
-                                    {item.ownership}
+                                    Rp.{item.totalFundingPending.toLocaleString('id-ID')}
                                 </div>
                             </div>
                             <div className="funding-pending-detail-item">
                                 <div className="funding-pending-label">
-                                    Total Funding Pending
+                                    Dana Terkumpul
                                 </div>
                                 <div className="funding-pending-value">
                                     Rp.{item.totalFundingPending.toLocaleString('id-ID')}
@@ -89,13 +89,8 @@ const FundingPending = () => {
                                     {item.unit}
                                 </div>
                             </div>
-                            <div className="funding-pending-detail-item">
-                                <div className="funding-pending-label">
-                                    Estimasi Dividen/Year
-                                </div>
-                                <div className="funding-pending-value">
-                                    Rp.0 - {estimasiDividen.toLocaleString('id-ID')}
-                                </div>
+                            <div id="approved-button">
+                                <button>Approved</button>
                             </div>
                             <div id="pending-see-funding-detail-button">
                                 <button>Lihat Detail</button>

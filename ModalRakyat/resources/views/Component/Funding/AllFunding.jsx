@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './AllFunding.css'
-import Balance from '../Balance/Balance'
+import BalanceFunding from '../Balance/BalanceFunding'
 
 const dataAllFunding = [
     { name: 'UMKM A', ownership: '20%', investment: 500000000, dividend: 0 },
@@ -64,7 +64,7 @@ const AllFunding = ({ balance, invest }) => {
 
     return (
         <div>
-            <Balance balance={balance} invest={invest} />
+            <BalanceFunding balance={balance} invest={invest} />
             <div id='funding-container'>
                 {dataAllFunding.map((item, index) => {
                     const dividendValue = item.dividend * item.investment;
@@ -75,23 +75,27 @@ const AllFunding = ({ balance, invest }) => {
                             </div>
                             <div id="funding-umkm-detail">
                                 <div className="funding-umkm-detail-item">
-                                    <div className="funding-label">Persentase Kepemilikan</div>
-                                    <div className="funding-value">{item.ownership}</div>
+                                    <div className="funding-label">Valuasi Aset</div>
+                                    <div className="funding-value">Rp {item.investment.toLocaleString('id-ID')}</div>
                                 </div>
                                 <div className="funding-umkm-detail-item">
-                                    <div className="funding-label">Total Investasi</div>
+                                    <div className="funding-label">Dana Terkumpul</div>
                                     <div className="funding-value">Rp {item.investment.toLocaleString('id-ID')}</div>
                                 </div>
                                 <div className="funding-umkm-detail-item">
                                     <div className="funding-label">Dividen Dibagikan</div>
                                     <div className="funding-value">Rp {dividendValue.toLocaleString('id-ID')} ({item.dividend * 100}%)</div>
                                 </div>
+                                <div className="jumlah-investor">
+                                    <div className="berapa-nih">Jumlah Investor</div>
+                                    <div className="tarok-aja">50</div>
+                                </div>
                                 <div id="download-report-button">
-                                    <button>Unduh Laporan</button>
+                                    <button>Bagi Dividen</button>
                                 </div>
-                                <div id="sell-ownership-button">
+                                {/* <div id="sell-ownership-button">
                                     <button onClick={() => openModal(item)}>Jual Kepemilikan</button>
-                                </div>
+                                </div> */}
                                 <div id="see-funding-detail-button">
                                     <button>Lihat Detail</button>
                                 </div>

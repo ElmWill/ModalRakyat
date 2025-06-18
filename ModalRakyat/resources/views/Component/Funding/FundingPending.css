@@ -63,3 +63,14 @@
     border-color: #FBA518;
     background-color: #FBA518;
 }
+
+#approved-button button {
+    width: 168px;
+    height: 55px;
+    border-radius: 10px;
+    box-shadow: none;
+    color: #70AF59;
+    font-weight: 500;
+    border-color: #70AF59;
+    background-color: white;
+}
