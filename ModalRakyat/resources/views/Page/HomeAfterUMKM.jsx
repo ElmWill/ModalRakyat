@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import Navbar from '../Component/Navbar/NavbarUMKM'
+import NavbarUMKM from '../Component/Navbar/NavbarUMKM'
 import Footer from '../Component/Footer/Footer'
-import WatchlistUMKM from '../Component/UMKM/Watchlist/WatchlistUMKM'
-import RecommendedUMKM from '../Component/UMKM/Recommended/RecommendedUMKM'
-import SearchBar from '../Component/SearchBar/SearchBar'
+import MyFundingUMKM from '../Component/UMKM/MyFundingUMKM/MyFundingUMKM'
+import PendingUMKM from '../Component/UMKM/PendingUMKM/PendingUMKM'
+import SearchBarUMKM from '../Component/SearchBar/SearchBarUMKM'
 import SearchOverlay from '../Component/SearchBar/SearchOverlay'
 
 const HomeUMKM = () => {
@@ -11,11 +11,11 @@ const HomeUMKM = () => {
 
   return (
       <div>
-          <Navbar />
-          <SearchBar onSearch={setSearchQuery} />
+          <NavbarUMKM />
+          <SearchBarUMKM onSearch={setSearchQuery} />
           {searchQuery && <SearchOverlay searchQuery={searchQuery} onClose={() => setSearchQuery('')} />}
-          <WatchlistUMKM />
-          <RecommendedUMKM />
+          <MyFundingUMKM />
+          <PendingUMKM />
           <Footer />
       </div>
     )

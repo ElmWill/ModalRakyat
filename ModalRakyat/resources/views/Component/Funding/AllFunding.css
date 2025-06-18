@@ -1,0 +1,111 @@
+#funding-container{
+    padding: 10px 40px;
+}
+
+#funding-items{
+    border: 1px solid #E52020;
+    border-radius: 10px; 
+    margin: 20px 0px;
+}
+
+#funding-umkm-name {
+    padding: 20px 10px 5px;
+}
+
+#funding-umkm-detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px 20px;
+}
+
+.funding-value {
+    font-weight: lighter;
+}
+
+#funding-umkm-detail button {
+    width: 168px;
+    height: 55px;
+    border-radius: 10px;
+    box-shadow: none;
+    color: #fff;
+    font-weight: 500;
+}
+
+#download-report-button button {
+    border-color: #70AF59;
+    background-color: #70AF59;
+}
+
+#sell-ownership-button button {
+    border-color: #EF5E5E;
+    background-color: #EF5E5E;
+}
+
+#see-funding-detail-button button {
+    border-color: #FBA518;
+    background-color: #FBA518;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    max-width: 90%;
+    text-align: center;
+}
+
+.modal-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.modal-content input {
+    width: 100%; /* atau ganti ke ukuran spesifik, misalnya 250px */
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+
+.modal-buttons button {
+    width: 120px;
+    height: 45px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.modal-buttons button:first-child {
+    background-color: #70AF59;
+}
+
+.modal-buttons button:last-child {
+    background-color: #EF5E5E;
+}
+
+.sell-ownership-error-text {
+    color: red;
+    margin-top: 10px;
+}

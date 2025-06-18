@@ -1,10 +1,6 @@
 import React from 'react'
-import wartegKemuning from '../../assets/Warteg Kemuning.png'
-import './Funding.css'
-
-const Funding = (name) => ({
-
-})
+import wartegKemuning from '../../../assets/Warteg Kemuning.png'
+import './PendingUMKM.css'
 
 const createUMKM = (name, category, progress, totalPendanaan, image) => ({
   name,
@@ -53,11 +49,11 @@ const UMKMCard = ({ name, category, progress, totalPendanaan, image, status }) =
   </li>
 )
 
-const WatchlistUMKM = () => {
+const PendingUMKM = () => {
   return (
-    <div id="watchlist-umkm">
-        <div className="watchlist-umkm-header">
-            <h1>Watch List</h1>
+    <div id="pending-umkm">
+        <div className="pending-umkm-header">
+            <h1>Pending</h1>
         </div>
         <div className="card-wrapper">
             <ul className="card-list">
@@ -70,4 +66,4 @@ const WatchlistUMKM = () => {
   )
 }
 
-export default WatchlistUMKM
+export default PendingUMKM
