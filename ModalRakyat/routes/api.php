@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\FavoriteController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\SecondaryMarketController;
 use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\UMKMProjectController;
 use App\Http\Controllers\WalletController;
@@ -12,6 +13,7 @@ use App\Http\Controllers\InvestmentController;
 use App\Http\Controllers\DividendController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\StoryController;
+use App\Models\Investment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InvestorController;
@@ -57,7 +59,11 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::post('/withdrawal', [WalletController::class, 'requestWithdrawal'])->name('withdrawal.request');
     });
 
-    Route::post('/projects/{project:projectID}/invest', [InvestorController::class, 'store'])->name('investments.store');
+    Route::post('/projects/{project:projectID}/invest', [Investment::class, 'store'])->name('investments.store');
+
+    Route::post('/investments/{investment:investmentID}/sell-offer', [SecondaryMarketController::class, 'createOffer'])->name('market.create-offer');
+    Route::get('/market/offers', [SecondaryMarketController::class, 'index'])->name('market.index');
+    Route::post('/market/offers/{offer:offerID}/purchase', [SecondaryMarketController::class, 'executePurchase'])->name('market.purchase');
 });
 
 Route::middleware('auth:sanctum')->put('/user/update-profile', [AuthController::class, 'updateProfile']);
