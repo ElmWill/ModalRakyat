@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\FavoriteController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\UMKMProjectController;
 use App\Http\Controllers\WalletController;
 use App\Http\Controllers\WatchlistController;
@@ -34,6 +35,8 @@ Route::middleware('auth:sanctum')->group(function () {
 
     Route::prefix('investor')->name('investor.')->group(function () {
         Route::get('/dashboard', [InvestorController::class, 'index'])->name('dashboard');
+        Route::get('/transactions', [TransactionController::class, 'getBuyOrSell'])->name('transactions.index');
+        Route::get('/transactions/{transaction:transactionID}', [TransactionController::class, 'show'])->name('transactions.show');
     });
 
     Route::prefix('watchlist')->name('watchlist.')->group(function () {
