@@ -1,0 +1,76 @@
+#funding-pending-container {
+    padding: 10px 40px;
+}
+
+.funding-pending-item {
+    border: 1px solid;
+    border-radius: 10px;
+    margin: 20px 0px;
+}
+
+#funding-pending-heading {
+    padding: 20px 10px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5vh;
+}
+
+#funding-pending-name {
+    margin-right: 10px;
+}
+
+#funding-pending-separator {
+    font-size: 27px;
+}
+
+#funding-pending-action {
+    font-size: 28px;
+    font-weight: bolder;
+}
+
+#funding-pending-date {
+    font-size: 20px;
+    font-weight: 300;
+    text-align: right;
+    margin-left: auto;
+}
+
+#funding-pending-detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.funding-pending-detail-item {
+    flex: 1 1 150px;
+}
+
+.funding-pending-value {
+    font-weight: lighter;
+}
+
+#pending-see-funding-detail-button button {
+    width: 168px;
+    height: 55px;
+    border-radius: 10px;
+    box-shadow: none;
+    color: #fff;
+    font-weight: 500;
+    border-color: #FBA518;
+    background-color: #FBA518;
+}
+
+#approved-button button {
+    width: 168px;
+    height: 55px;
+    border-radius: 10px;
+    box-shadow: none;
+    color: #70AF59;
+    font-weight: 500;
+    border-color: #70AF59;
+    background-color: white;
+}

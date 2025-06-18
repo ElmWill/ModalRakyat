@@ -17,10 +17,10 @@ const createUMKM = (name, category, progress, totalPendanaan, image) => ({
 
 const umkmList = [
   createUMKM('Makaroni Ngehe', 'Food and Beverage', 100, 500000000, makaroniNgehe),
-  createUMKM('Toko Kemanggisan', 'Retail', 95, 5000000, tokoKemanggisan),
+  createUMKM('Toko Kemanggisan', 'Retail', 95, 500000000, tokoKemanggisan),
   createUMKM('Rocky Fried Chicken', 'Food and Beverage', 85, 300000000, rocky),
   createUMKM('Naruna Ceramic', 'Manufactur', 75, 300000000, narunaCeramic),
-  createUMKM('Warteg Kemuning', 'Food and Beverage', 70, 'Rp.100.000.000', wartegKemuning)
+  createUMKM('Warteg Kemuning', 'Food and Beverage', 70, 100000000, wartegKemuning)
 ]
 
 
@@ -46,7 +46,7 @@ const UMKMCard = ({ name, category, progress, totalPendanaan, image, status }) =
         </div>
         <div className="pendanaan">
           <h3>Total Pendanaan</h3>
-          <h3>{totalPendanaan}</h3>
+          <h3>Rp.{totalPendanaan.toLocaleString('id-ID')}</h3>
         </div>
       </div>
     </a>

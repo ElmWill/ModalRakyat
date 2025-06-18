@@ -1,9 +1,6 @@
 import React from 'react'
-import wartegKemuning from '../../assets/Warteg Kemuning.png'
-import tokoKemanggisan from '../../assets/toko-kemanggisan.webp'
-import rocky from '../../assets/rocky.jpg'
-import narunaCeramic from '../../assets/naruna-ceramic.jpg'
-import '../UMKM/Recommended/RecommendedUMKM.css'
+import wartegKemuning from '../../../assets/Warteg Kemuning.png'
+import './MyFundingUMKM.css'
 
 const createUMKM = (name, category, progress, totalPendanaan, image) => ({
   name,
@@ -15,17 +12,18 @@ const createUMKM = (name, category, progress, totalPendanaan, image) => ({
 })
 
 const umkmList = [
-  createUMKM('Warteg Kemuning', 'Food and Beverage', 70, 100000000, wartegKemuning),
-  createUMKM('Toko Kemanggisan', 'Retail', 95, 500000000, tokoKemanggisan),
-  createUMKM('Rocky Fried Chicken', 'Food and Beverage', 85, 300000000, rocky),
-  createUMKM('Naruna Ceramic', 'Manufactur', 75, 300000000, narunaCeramic),
+  createUMKM('Warteg Kemuning', 'Food and Beverage', 70, 'Rp.100.000.000', wartegKemuning),
+  createUMKM('Warteg Kemuning', 'Food and Beverage', 100, 'Rp.100.000.000', wartegKemuning),
+  createUMKM('Warteg Kemuning', 'Food and Beverage', 70, 'Rp.100.000.000', wartegKemuning),
+  createUMKM('Warteg Kemuning', 'Food and Beverage', 70, 'Rp.100.000.000', wartegKemuning),
+  createUMKM('Warteg Kemuning', 'Food and Beverage', 70, 'Rp.100.000.000', wartegKemuning)
 ]
 
 
 // Komponen kartu UMKM
 const UMKMCard = ({ name, category, progress, totalPendanaan, image, status }) => (
   <li className="card-item">
-    <a href="/detail" className="card-link">
+    <a href="#" className="card-link">
       <img src={image} alt="Card Image" className="card-image" />
       <div className={`status-badge-umkm ${status === 'Done' ? 'done' : 'on-progress'}`}>
           {status}
@@ -44,18 +42,21 @@ const UMKMCard = ({ name, category, progress, totalPendanaan, image, status }) =
         </div>
         <div className="pendanaan">
           <h3>Total Pendanaan</h3>
-          <h3>Rp.{totalPendanaan.toLocaleString('id-ID')}</h3>
+          <h3>{totalPendanaan}</h3>
         </div>
       </div>
     </a>
   </li>
 )
 
-const RecommendedUMKM = () => {
+const MyFundingUMKM = () => {
   return (
-    <div id="recommended-umkm">
-        <div className="recommended-umkm-header">
-            <h1>Recommend</h1>
+    <div id="myfunding-umkm">
+        <div className="myfunding-umkm-header">
+          <h1>My Funding</h1>
+          <div id="add-funding-button">
+            <button>Add Funding</button>
+          </div>
         </div>
         <div className="card-wrapper">
             <ul className="card-list">
@@ -68,4 +69,4 @@ const RecommendedUMKM = () => {
   )
 }
 
-export default RecommendedUMKM
+export default MyFundingUMKM

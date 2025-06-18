@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
-import './Portofolio.css'
-import Balance from '../Balance/Balance'
+import './AllFunding.css'
+import BalanceFunding from '../Balance/BalanceFunding'
 
-const dataPortofolio = [
-    { name: 'Warteg Kemuning', ownership: '50%', investment: 50000000, dividend: 0 },
-    { name: 'Gonegani', ownership: '7.14%', investment: 50000000, dividend: 0 },
-    { name: 'Makaroni Ngehe', ownership: '16.6%', investment: 50000000, dividend: 0 },
-    { name: 'Rocky Fried Chicken', ownership: '16.6%', investment: 50000000, dividend: 0 }
+const dataAllFunding = [
+    { name: 'UMKM A', ownership: '20%', investment: 500000000, dividend: 0 },
+    { name: 'UMKM B', ownership: '20%', investment: 500000000, dividend: 0 },
+    { name: 'UMKM C', ownership: '20%', investment: 500000000, dividend: 0 },
+    { name: 'UMKM D', ownership: '20%', investment: 500000000, dividend: 0 }
 ]
 
-const Portofolio = ({ balance, invest }) => {
+const AllFunding = ({ balance, invest }) => {
     const today = new Date()
     const formattedDate = today.toLocaleDateString('id-ID', {
         day: 'numeric',
@@ -64,35 +64,39 @@ const Portofolio = ({ balance, invest }) => {
 
     return (
         <div>
-            <Balance balance={balance} invest={invest} />
-            <div id='porto-container'>
-                {dataPortofolio.map((item, index) => {
+            <BalanceFunding balance={balance} invest={invest} />
+            <div id='funding-container'>
+                {dataAllFunding.map((item, index) => {
                     const dividendValue = item.dividend * item.investment;
                     return (
-                        <div id="porto-items" key={index}>
-                            <div id="porto-umkm-name">
+                        <div id="funding-items" key={index}>
+                            <div id="funding-umkm-name">
                                 <h1>{item.name}</h1>
                             </div>
-                            <div id="porto-umkm-detail">
-                                <div className="porto-umkm-detail-item">
-                                    <div className="porto-label">Persentase Kepemilikan</div>
-                                    <div className="porto-value">{item.ownership}</div>
+                            <div id="funding-umkm-detail">
+                                <div className="funding-umkm-detail-item">
+                                    <div className="funding-label">Valuasi Aset</div>
+                                    <div className="funding-value">Rp {item.investment.toLocaleString('id-ID')}</div>
                                 </div>
-                                <div className="porto-umkm-detail-item">
-                                    <div className="porto-label">Total Investasi</div>
-                                    <div className="porto-value">Rp {item.investment.toLocaleString('id-ID')}</div>
+                                <div className="funding-umkm-detail-item">
+                                    <div className="funding-label">Dana Terkumpul</div>
+                                    <div className="funding-value">Rp {item.investment.toLocaleString('id-ID')}</div>
                                 </div>
-                                <div className="porto-umkm-detail-item">
-                                    <div className="porto-label">Dividen Dibagikan</div>
-                                    <div className="porto-value">Rp {dividendValue.toLocaleString('id-ID')} ({item.dividend * 100}%)</div>
+                                <div className="funding-umkm-detail-item">
+                                    <div className="funding-label">Dividen Dibagikan</div>
+                                    <div className="funding-value">Rp {dividendValue.toLocaleString('id-ID')} ({item.dividend * 100}%)</div>
+                                </div>
+                                <div className="jumlah-investor">
+                                    <div className="berapa-nih">Jumlah Investor</div>
+                                    <div className="tarok-aja">50</div>
                                 </div>
                                 <div id="download-report-button">
-                                    <button>Unduh Laporan</button>
+                                    <button>Bagi Dividen</button>
                                 </div>
-                                <div id="sell-ownership-button">
+                                {/* <div id="sell-ownership-button">
                                     <button onClick={() => openModal(item)}>Jual Kepemilikan</button>
-                                </div>
-                                <div id="see-porto-detail-button">
+                                </div> */}
+                                <div id="see-funding-detail-button">
                                     <button>Lihat Detail</button>
                                 </div>
                             </div>
@@ -128,4 +132,4 @@ const Portofolio = ({ balance, invest }) => {
     )
 }
 
-export default Portofolio
+export default AllFunding

@@ -1,5 +1,6 @@
 import React from 'react'
 import './Footer.css'
+import modalrakyat_logo from '../../assets/Logo.png'
 import footer_icon from '../../assets/footer-icon.png'
 import email_icon from '../../assets/email.png'
 import telephone_icon from '../../assets/telephone.png'
