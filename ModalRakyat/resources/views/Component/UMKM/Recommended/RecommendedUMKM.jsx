@@ -16,7 +16,7 @@ const createUMKM = (name, category, progress, totalPendanaan, image) => ({
 
 const umkmList = [
   createUMKM('Warteg Kemuning', 'Food and Beverage', 70, 100000000, wartegKemuning),
-  createUMKM('Toko Kemanggisan', 'Retail', 95, 5000000, tokoKemanggisan),
+  createUMKM('Toko Kemanggisan', 'Retail', 95, 500000000, tokoKemanggisan),
   createUMKM('Rocky Fried Chicken', 'Food and Beverage', 85, 300000000, rocky),
   createUMKM('Naruna Ceramic', 'Manufactur', 75, 300000000, narunaCeramic),
 ]

@@ -11,22 +11,58 @@ const InvestmentHistory = () => {
 
     const investmentHistoryData = [
         {
-            umkmName: 'UMKM A',
+            umkmName: 'Warteg Kemuning',
             action: 'BUY',
             date: '17 Juni 2025',
-            ownership: '20%',
+            ownership: '50%',
             totalInvestasi: 50000000,
-            dividenYield: 0.11, // 11%
-            unit: 500
+            dividenYield: 0.11, 
+            unit: 50
         },
         {
-            umkmName: 'UMKM B',
+            umkmName: 'Gonegani',
+            action: 'BUY',
+            date: '17 Juni 2025',
+            ownership: '7.14%',
+            totalInvestasi: 50000000,
+            dividenYield: 0.05, 
+            unit: 50
+        },
+        {
+            umkmName: 'Gonegani',
             action: 'SELL',
             date: '17 Juni 2025',
+            ownership: '7.14%',
+            totalInvestasi: 50000000,
+            dividenYield: 0.05, 
+            unit: 50
+        },
+        {
+            umkmName: 'Makaroni Ngehe',
+            action: 'BUY',
+            date: '17 Juni 2025',
             ownership: '10%',
-            totalInvestasi: 30000000,
-            dividenYield: 0.05, // 5%
-            unit: 300
+            totalInvestasi: 50000000,
+            dividenYield: 0.08, 
+            unit: 50
+        },
+        {
+            umkmName: 'Rocky Fried Chicken',
+            action: 'BUY',
+            date: '17 Juni 2025',
+            ownership: '16.6%',
+            totalInvestasi: 50000000,
+            dividenYield: 0.05,
+            unit: 50
+        },
+        {
+            umkmName: 'Naruna Ceramic',
+            action: 'BUY',
+            date: '18 Juni 2025',
+            ownership: '16.6%',
+            totalInvestasi: 50000000,
+            dividenYield: 0.06, 
+            unit: 50
         }
     ]
 
